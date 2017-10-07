@@ -11,7 +11,7 @@ module.exports = {
 	devtool: 'cheap-module-source-map',
 	context: resolve(__dirname, '../source'),
 	entry: [
-		// 'babel-polyfill',
+		'babel-polyfill',
 		'./index.js'
 	],
 

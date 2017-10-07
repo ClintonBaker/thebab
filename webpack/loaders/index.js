@@ -26,7 +26,7 @@ module.exports = [
 				{
 					loader: 'stylus-loader',
 					options: {
-						include: [path.resolve(__dirname, '../../styles/utils')]
+						import: [path.resolve(__dirname, '../../source/styles/utils/index.styl')]
 					}
 				}
 			]
