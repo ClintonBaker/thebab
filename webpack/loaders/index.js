@@ -26,7 +26,7 @@ module.exports = [
 				{
 					loader: 'stylus-loader',
 					options: {
-						include: [path.resolve(__dirname, '../../styles/utils')]
+						import: [path.resolve(__dirname, '../../source/styles/utils/index.styl')]
 					}
 				}
 			]
@@ -36,5 +36,9 @@ module.exports = [
 		test: /\.json$/,
 		exclude: /node_modules/,
 		use: 'json-loader'
+	},
+	{
+		test: /\.(ttf|woff|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+		loader: 'url-loader'
 	}
 ]
