@@ -36,5 +36,9 @@ module.exports = [
 		test: /\.json$/,
 		exclude: /node_modules/,
 		use: 'json-loader'
+	},
+	{
+		test: /\.(ttf|woff|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+		loader: 'url-loader'
 	}
 ]
