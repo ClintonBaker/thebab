@@ -1,0 +1,36 @@
+{
+	"plugins": [
+		"module:jsx-control-statements",
+		"transform-inline-environment-variables",
+		"react-html-attrs",
+		[
+			"sitrep",
+			{
+				"label": "inspect"
+			}
+		],
+		[
+			"flow-runtime",
+			{
+				"assert": true,
+				"annotate": true
+			}
+		],
+		[
+			"react-css-modules",
+			{
+				"context": "./source/",
+				"generateScopedName": "[local]_[name]"
+			}
+		],
+		"transform-decorators",
+		["transform-class-properties", { "loose": true }]
+	],
+
+	"presets": [
+		"env",
+		"flow",
+		"react",
+		"stage-0"
+	]
+}
