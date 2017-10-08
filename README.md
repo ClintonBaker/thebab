@@ -31,3 +31,5 @@ npm start
 npm i -g ntl
 ntl
 ```
+
+![ntl example](/docs/images/ntl-example.png?raw=true)
