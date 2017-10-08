@@ -1,6 +1,8 @@
 const path = require('path')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
+const stylusUtilsPaths = [path.resolve(__dirname, '../../source/styles/utils/index.styl')];
+
 module.exports = [
 	{
 		test: /\.js$/,
@@ -26,7 +28,7 @@ module.exports = [
 				{
 					loader: 'stylus-loader',
 					options: {
-						import: [path.resolve(__dirname, '../../source/styles/utils/index.styl')]
+						import: stylusUtilsPaths
 					}
 				}
 			]
