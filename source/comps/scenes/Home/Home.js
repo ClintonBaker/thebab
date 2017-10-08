@@ -4,6 +4,7 @@ import './styles/Home.css'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import * as userActions from '@store/actions/users'
+import { Title } from '@comps/atoms'
 
 type PropsT = {
 	actions: Object
@@ -14,15 +15,12 @@ const Home = (props: PropsT) => {
 	return (
 		<div styleName="Home">
 			<header></header>
-			<span>This is Home</span>
-			<h1>Here is the app.</h1>
-			<br/>
-			<button onClick={props.actions.getUsers}>GET THE USERS</button>
-			<button onClick={props.actions.clearUsers}>GET THE USERS</button>
-			<br/>
-			<p>users: {props.users.length}</p>
-			<br/>
-			<div class="test0">test0</div>
+			<div styleName='header'>
+				<Title>The <span styleName='green'>Hub</span> For Tooling Enthusiasts</Title>
+				<p>Libraries, frameworks, courses and more. We got the toolz.</p>
+			</div>
+			{/* <button onClick={props.actions.getUsers}>GET THE USERS</button> */}
+			{/* <button onClick={props.actions.clearUsers}>GET THE USERS</button> */}
 		</div>
 	)
 }

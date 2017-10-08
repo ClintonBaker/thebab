@@ -4,10 +4,12 @@ import { connect } from 'react-redux'
 import React from 'react'
 
 import { Browse, Home, Inspect, Profile, Settings, Submit } from '@scenes'
+import { Navbar } from '@comps/organisms'
 
 const App = props => {
 	return (
 		<div>
+			<Navbar/>
 			<Router history={browserHistory}>
 				<Route path="/">
 					<IndexRoute component={Home} />
