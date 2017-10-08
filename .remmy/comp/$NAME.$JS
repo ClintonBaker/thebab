@@ -1,5 +1,5 @@
 import React from 'react'
-import './$NAME.$CSS'
+import './styles/$NAME.$CSS'
 
 const $NAME = (props: PropsT) => {
 	return (

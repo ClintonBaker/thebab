@@ -32,7 +32,7 @@
   },
 
   "variables": {
-    "$CSS" : "styl",
+    "$CSS" : "css",
     "$JS": "js"
   }
 }
