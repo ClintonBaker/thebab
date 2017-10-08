@@ -1,17 +1,18 @@
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import React from 'react';
-import { Home } from '@scenes';
+import { Browse, Home, Profile, Submit } from '@scenes';
 
 const App = (props) => {
 	return (
 		<div>
 			<Router history={ browserHistory }>
 				<Route path='/'>
-					<IndexRoute component={ Home }/>
+					<IndexRoute component={ Home } />
+					<Route path='/profile' component={ Profile } />
+					<Route path='/browse' component={ Browse } />
+					<Route path='/submit' component={ Submit } />
 				</Route>
-				<header>yolo</header>
-				<h1>Here is the app.</h1>
-				<div class='test0'>test0</div>
+
 			</Router>
 		</div>
 	)
