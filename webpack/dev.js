@@ -32,7 +32,7 @@ module.exports = {
 			'@styles': resolve(__dirname, '../source/styles'),
 			'@utils': resolve(__dirname, '../source/utils'),
 			'@packages': resolve(__dirname, '../source/packages'),
-			'@scenes': resolve(__dirname, '../source/scenes'),
+			'@scenes': resolve(__dirname, '../source/comps/scenes'),
 			'@stores': resolve(__dirname, '../source/stores')
     }
 	},

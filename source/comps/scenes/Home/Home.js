@@ -1,10 +1,13 @@
 import React from 'react'
-import './Home.styl'
+import './styles/Home.css'
 
 const Home = (props: PropsT) => {
 	return (
-		<div styleName='Home'>
-
+		<div styleName="Home">
+			<span>This is Home</span>
+			<header>yolo</header>
+			<h1>Here is the app.</h1>
+			<div class="test0">test0</div>
 		</div>
 	)
 }
