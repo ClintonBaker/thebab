@@ -1,3 +1,25 @@
 .Home {
   layout: column;
+	content-x: center;
+	contain: 1199px 24px;
+}
+
+.green {
+	color: color-accent1;
+}
+
+.header {
+	height: 180px;
+	layout: column;
+	content-x: center;
+	content-y: center;
+	color: color-white0;
+}
+
+.header p {
+	max-width: 780px;
+	margin-top: 12px;
+	font-size: 1.8rem;
+	text-shadow: text-shadow0;
+	color: color-white2;
 }
