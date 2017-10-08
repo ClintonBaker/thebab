@@ -1,0 +1,20 @@
+.Navbar {
+	layout: row;
+	content-x: space-between;
+	content-y: center;
+	padding: 0 24px;
+	width: 100vw;
+	height: 60px;
+	color: color-white0;
+}
+
+.logoBox {
+
+}
+
+.linksBox {
+	layout: row;
+	p {
+		margin: 0 6px;
+	}
+}
