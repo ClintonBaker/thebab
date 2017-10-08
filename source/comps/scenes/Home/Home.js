@@ -1,5 +1,5 @@
 import React from 'react'
-import './styles/Home.styl'
+import './styles/Home.css'
 
 const Home = (props: PropsT) => {
 	return (
