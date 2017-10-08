@@ -1,5 +1,8 @@
 import { Router, Route, IndexRoute, browserHistory } from 'react-router'
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
 import React from 'react'
+
 import { Browse, Home, Inspect, Profile, Settings, Submit } from '@scenes'
 
 const App = props => {
