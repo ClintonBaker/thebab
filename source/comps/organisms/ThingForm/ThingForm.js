@@ -20,6 +20,11 @@ class ThingForm extends React.Component {
 		});
 	};
 
+	submitForm = ( e ) => {
+		e.preventDefault();
+		console.log('Woosh! Magical submit logic happened!');
+	}
+
 	render(){
 		return (
 			<div styleName='ThingForm'>
@@ -28,8 +33,8 @@ class ThingForm extends React.Component {
 					<ThingLink name='thinglink' value={ this.state.thinglink } updateInput={ this.updateInput } />
 					<Description name='description' value={ this.state.description } updateInput={ this.updateInput } />
 					<Tagz name='tagz' value={ this.state.tagz } updateInput={ this.updateInput } />
+					<button onClick={ this.submitForm } >Submit</button>
 				</form>
-				
 			</div>
 		)
 	}
