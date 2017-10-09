@@ -5,7 +5,7 @@ import './styles/Description.css'
 const Description = ( props ) => {
   return (
     <label styleName='Description'>
-      Description: <input type='text' input={ props.description } onChange={ props.updateInput } />
+      Description: <input name={ props.name } type='text' value={ props.value } onChange={ props.updateInput } />
     </label>
   );
 };

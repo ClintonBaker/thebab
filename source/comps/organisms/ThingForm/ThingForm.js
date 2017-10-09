@@ -23,15 +23,12 @@ class ThingForm extends React.Component {
 	render(){
 		return (
 			<div styleName='ThingForm'>
-				Hello World!
-				{/*
 				<form>
-					<Name name={ this.state.name } updateInput={ this.updateInput } />
-					<ThingLink thinglink={ this.state.thinglink } updateInput={ this.updateInput } />
-					<Description description={ this.state.description } updateInput={ this.updateInput } />
-					<Tagz tagz={ this.state.tagz } updateInput={ this.updateInput } />
+					<Name name='name' value={ this.state.name } updateInput={ this.updateInput } />
+					<ThingLink name='thinglink' value={ this.state.thinglink } updateInput={ this.updateInput } />
+					<Description name='description' value={ this.state.description } updateInput={ this.updateInput } />
+					<Tagz name='tagz' value={ this.state.tagz } updateInput={ this.updateInput } />
 				</form>
-				*/}
 				
 			</div>
 		)
