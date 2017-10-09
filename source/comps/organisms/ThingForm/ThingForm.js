@@ -22,7 +22,7 @@ class ThingForm extends React.Component {
 
 	submitForm = ( e ) => {
 		e.preventDefault();
-		console.log('Woosh! Magical submit logic happened!');
+		this.props.actions.postForm();
 	}
 
 	render(){
