@@ -4,7 +4,7 @@ import './styles/Home.css'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import * as userActions from '@store/actions/users'
-import { Title } from '@comps/atoms'
+import { Title, Input } from '@comps/atoms'
 
 type PropsT = {
 	actions: Object

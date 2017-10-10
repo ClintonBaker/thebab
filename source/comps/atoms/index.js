@@ -1,2 +1,2 @@
 export { Title } from './Title'
-// export Icon from './Icon'
+export { Input } from './Input'
