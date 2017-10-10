@@ -6,7 +6,7 @@
 	height: 40px;
 	min-height: 40px;
 	max-height: 40px;
-	display: block;
+	display: inline-block;
 	cursor: pointer;
 }
 
@@ -19,7 +19,7 @@
 	font-weight: 500;
 	color: #333d47;
 	font-size: 1.6rem;
-	letter-spacing: .02rem;
+	letter-spacing: .05rem;
 	line-height: 1.2;
 
 	&::-webkit-input-placeholder {
@@ -27,7 +27,7 @@
 		font-weight: 500;
 		color: #959aba;
 		font-size: 1.5rem;
-		letter-spacing: .02rem;
+		letter-spacing: .05rem;
 		line-height: 1.2;
 	}
 }
