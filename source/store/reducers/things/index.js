@@ -1,10 +1,10 @@
 import { POST_THING } from '../../consts/things';
 
-const initialState = [];
+const initialState = []
 
 export default (state = initialState, action) => {
   if(action.type === POST_THING){
-    return [];
+    return {  ...state, FormPosted: action.data  };
   } else {
     return state;
   }

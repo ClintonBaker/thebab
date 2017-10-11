@@ -8,10 +8,25 @@ import Tagz from './Tagz';
 
 class ThingForm extends React.Component {
 	state = {
+		FormPosted: '',
 		name: '',
 		thinglink: '',
 		description: '',
 		tagz: ''
+	};
+
+	componentDidUpdate = () => {
+		this.state.FormPosted !== ''
+		? this.setState( state => {
+			return {
+				FormPosted: '',
+				name: '',
+				thinglink: '',
+				description: '',
+				tagz: ''
+			}
+		})
+		: null;
 	};
 
 	updateInput = ({ target: { name, value } }) => {
@@ -22,7 +37,14 @@ class ThingForm extends React.Component {
 
 	submitForm = ( e ) => {
 		e.preventDefault();
-		this.props.actions.postForm();
+		this.props.actions.PostForm({
+			name: this.state.name,
+			thinglink: this.state.thinglink,
+			description: this.state.description,
+			tagz: this.state.tagz
+		});
+
+		this.props.actions.GetUsers();
 	}
 
 	render(){
