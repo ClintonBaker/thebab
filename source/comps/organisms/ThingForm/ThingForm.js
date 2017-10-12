@@ -42,7 +42,7 @@ class ThingForm extends React.Component {
 			tagz: this.state.tagz
 		});
 		this.clearForm();
-		console.log(this.props.FormPosted);
+		
 	}
 
 	render(){
