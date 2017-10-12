@@ -15,9 +15,8 @@ class ThingForm extends React.Component {
 		tagz: ''
 	};
 
-	componentDidUpdate = () => {
-		this.state.FormPosted !== ''
-		? this.setState( state => {
+	clearForm = () => {
+		this.setState( state => {
 			return {
 				FormPosted: '',
 				name: '',
@@ -25,8 +24,7 @@ class ThingForm extends React.Component {
 				description: '',
 				tagz: ''
 			}
-		})
-		: null;
+		});
 	};
 
 	updateInput = ({ target: { name, value } }) => {
@@ -43,8 +41,8 @@ class ThingForm extends React.Component {
 			description: this.state.description,
 			tagz: this.state.tagz
 		});
-
-		this.props.actions.GetForm();
+		this.clearForm();
+		console.log(this.props.FormPosted);
 	}
 
 	render(){

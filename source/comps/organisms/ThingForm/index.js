@@ -5,7 +5,7 @@ import { getUsers } from '@store/actions/users';
 
 const mapStateToProps = state => {
 	return {
-		session: state.session
+		FormPosted: state.FormPosted
 	};
 };
 
@@ -14,17 +14,6 @@ const mapActionsToProps = dispatch => {
 		actions: {
       PostForm( form ) {
         dispatch(postThing( form ));
-			},
-			GetForm() {
-				fetch('http://rest.learncode.academy/api/thebab/things')
-				.then( response => {
-					return response.json();
-				}).then( json =>{
-					console.log(json);
-				});
-			},
-			GetUsers() {
-				dispatch(getUsers());
 			}
 		}
 	}
