@@ -44,7 +44,7 @@ class ThingForm extends React.Component {
 			tagz: this.state.tagz
 		});
 
-		this.props.actions.GetUsers();
+		this.props.actions.GetForm();
 	}
 
 	render(){
