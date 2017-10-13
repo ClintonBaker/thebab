@@ -4,7 +4,7 @@ const plugins = require('./plugins')
 const webpack = require('webpack')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-
+const alias = require('./parts/alias');
 
 module.exports = {
 	cache: false,
@@ -27,14 +27,7 @@ module.exports = {
 	resolve: {
     modules: [resolve(__dirname, '../node_modules')],
     extensions: ['.js', '.json', '.jsx', '.css', '.styl'],
-    alias: {
-      '@comps': resolve(__dirname, '../source/comps'),
-			'@styles': resolve(__dirname, '../source/styles'),
-			'@utils': resolve(__dirname, '../source/utils'),
-			'@packages': resolve(__dirname, '../source/packages'),
-			'@scenes': resolve(__dirname, '../source/comps/scenes'),
-			'@store': resolve(__dirname, '../source/store')
-    }
+    alias: alias
 	},
 
 	plugins: [
@@ -50,12 +43,6 @@ module.exports = {
 		], {
 			verbose: true,
 			root: resolve(__dirname, '../build')
-		}),
-		// new CopyWebpackPlugin([
-    //   {
-    //     from: '../node_modules/monaco-editor/min/vs',
-    //     to: 'vs',
-    //   }
-    // ])
+		})
 	]
 }

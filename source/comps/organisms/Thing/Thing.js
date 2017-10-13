@@ -1,5 +1,5 @@
 import React from 'react'
-import './Thing.styl'
+import './styles/Thing.css'
 
 const Thing = (props: PropsT) => {
 	return (
