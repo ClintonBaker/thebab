@@ -14,7 +14,7 @@ const mapStateToProps = state => {
 const mapActionsToProps = dispatch => {
 	return {
 		actions: {
-      PostForm( form ) {
+      postThing( form ) {
         dispatch(postThing( form ));
 			}
 		}

@@ -1,6 +1,6 @@
-import React from 'react'
-import { Redirect } from 'react-router'
-import './styles/ThingForm.css'
+import React from 'react';
+import { Redirect } from 'react-router';
+import './styles/ThingForm.css';
 
 import Name from './Name';
 import ThingLink from './ThingLink';
@@ -16,21 +16,15 @@ class ThingForm extends React.Component {
 		tagz: ''
 	};
 
-	componentDidUpdate() {
-		this.props.FormPosted
-	  ? this.props.redirect( true )
-		: null;
-	}
-
 	clearForm = () => {
-		this.setState( state => {
+		this.setState(state => {
 			return {
 				FormPosted: '',
 				name: '',
 				thinglink: '',
 				description: '',
 				tagz: ''
-			}
+			};
 		});
 	};
 
@@ -40,31 +34,46 @@ class ThingForm extends React.Component {
 		});
 	};
 
-	submitForm = ( e ) => {
-		e.preventDefault();
-		this.props.actions.PostForm({
+	submitForm = event => {
+		event.preventDefault();
+		this.props.actions.postThing({
 			name: this.state.name,
 			thinglink: this.state.thinglink,
 			description: this.state.description,
 			tagz: this.state.tagz
 		});
 		this.clearForm();
-		
-	}
+	};
 
-	render(){
+	render() {
 		return (
-			<div styleName='ThingForm'>
+			<div styleName="ThingForm">
 				<form>
-					<Name name='name' value={ this.state.name } updateInput={ this.updateInput } />
-					<ThingLink name='thinglink' value={ this.state.thinglink } updateInput={ this.updateInput } />
-					<Description name='description' value={ this.state.description } updateInput={ this.updateInput } />
-					<Tagz name='tagz' value={ this.state.tagz } updateInput={ this.updateInput } />
-					<button onClick={ this.submitForm } >Submit</button>
+					<Name
+						name="name"
+						value={this.state.name}
+						updateInput={this.updateInput}
+					/>
+					<ThingLink
+						name="thinglink"
+						value={this.state.thinglink}
+						updateInput={this.updateInput}
+					/>
+					<Description
+						name="description"
+						value={this.state.description}
+						updateInput={this.updateInput}
+					/>
+					<Tagz
+						name="tagz"
+						value={this.state.tagz}
+						updateInput={this.updateInput}
+					/>
+					<button onClick={this.submitForm}>Submit</button>
 				</form>
 			</div>
-		)
+		);
 	}
 }
 
-export default ThingForm
+export default ThingForm;

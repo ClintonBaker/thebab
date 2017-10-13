@@ -1,7 +1,7 @@
-import React from 'react'
-import './styles/Submit.css'
+import React from 'react';
+import './styles/Submit.css';
 
-import { ThingForm } from '@comps/organisms'
+import { ThingForm } from '@comps/organisms';
 
 class Submit extends React.Component {
 	state = {
@@ -9,26 +9,25 @@ class Submit extends React.Component {
 	};
 
 	componentDidUpdate() {
-		this.state.redirect
-		? this.props.router.push('/inspect/' + this.props.ID)
-		: null;
-	};
+		console.log(this.props);
+		this.props.FormPosted ? this.props.router.push('/inspect/' + this.props.ID) : null;
+	}
 
-	redirect = (red) => {
-		this.setState( state => {
+	redirect = red => {
+		this.setState(state => {
 			return {
 				redirect: red
 			};
 		});
 	};
 
-	render(){
+	render() {
 		return (
-			<div styleName='Submit'>
-				<ThingForm redirect={ this.redirect }/>
+			<div styleName="Submit">
+				<ThingForm redirect={this.redirect} />
 			</div>
-		)
+		);
 	}
 }
 
-export default Submit
+export default Submit;
