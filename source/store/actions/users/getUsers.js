@@ -4,7 +4,7 @@ const GET_USERS_ENDPOINT = 'https://jsonplaceholder.typicode.com/users'
 
 export default () => {
 	return async dispatch => {
-		console.log('getting users')
+		// console.log('getting users')
 		const response = await fetch(GET_USERS_ENDPOINT)
 		const users = await response.json()
 		return({

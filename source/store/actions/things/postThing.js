@@ -1,7 +1,7 @@
 import { POST_THING } from '../../consts/things';
 
 export default ( form ) => {
-  console.log(JSON.stringify(form));
+  // console.log(JSON.stringify(form));
   return dispatch => {
     fetch('http://rest.learncode.academy/api/thebab/things', {
       method: 'POST',
@@ -15,13 +15,13 @@ export default ( form ) => {
       }
       throw new Error('Shit fucked up');
     }).then(json => {
-      console.log(json);
+      // console.log(json);
       dispatch({
         type: POST_THING,
         data: 'Form Posted'
       });
     }).catch( error => {
-      console.log('We had some issues...');
+      // console.log('We had some issues...');
     });
   };
 };

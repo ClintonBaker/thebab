@@ -5,26 +5,26 @@ const flatten = (data = {}) => {
 	const dataType = typeof(data)
 
 	if (dataType === 'string') {
-		console.log(i++, 'string', data)
+		// console.log(i++, 'string', data)
 		return flattenFromString(data)
 	} else if (dataType === 'object') {
-		console.log(i++, 'object', data)
+		// console.log(i++, 'object', data)
 		return flattenFromObject(data)
 	}
 
-	console.log(i++, 'other')
+	// console.log(i++, 'other')
 	return flattenFromOther(data)
 }
 
 const flattenFromString = (data) => {
-	console.log('flattenFromString', typeof data)
+	// console.log('flattenFromString', typeof data)
 	try {
 		const object = JSON.parse(data)
 		return flattenFromObject(object)
 	} catch(error) {
-		console.log('Failed to JSON.parse data.', error)
+		// console.log('Failed to JSON.parse data.', error)
 	} finally {
-		console.log('returning ', data)
+		// console.log('returning ', data)
 		return data
 	}
 }

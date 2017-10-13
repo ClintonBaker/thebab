@@ -13,7 +13,7 @@ const mapActionsToProps = dispatch => {
 	return {
 		actions: {
 			logHello() {
-				console.log('hello, fucker.')
+				// console.log('hello, fucker.')
 			}
 		}
 	}

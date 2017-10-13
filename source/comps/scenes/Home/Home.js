@@ -12,7 +12,7 @@ type PropsT = {
 };
 
 const Home = (props: PropsT) => {
-	console.log({ props });
+	// console.log({ props });
 	return (
 		<div styleName="Home">
 			<header />

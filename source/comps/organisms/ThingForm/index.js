@@ -4,7 +4,7 @@ import { postThing } from '@store/actions/things';
 import { getUsers } from '@store/actions/users';
 
 const mapStateToProps = state => {
-	console.log(state);
+	// console.log(state);
 	return {
 		FormPosted: state.things.FormPosted
 	};

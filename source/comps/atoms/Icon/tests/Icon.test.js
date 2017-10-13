@@ -3,5 +3,5 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import Icon from '../Icon';
 
-console.log('Icon');
+// console.log('Icon');
 ava.test.todo('- write tests for Icon.');
