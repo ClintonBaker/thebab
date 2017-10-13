@@ -1,1 +1,1 @@
-export InlineButton from './InlineButton'
+export InlineButton from './InlineButton';

@@ -1,4 +1,3 @@
-
 // const formatEditorValue = (editor) => {
 // 	editor.executeEdits(
 // 		'format',
@@ -84,7 +83,6 @@
 // 		editor.executeEdits('replaceeng', [
 // 			{ range: getCompleteRange(editor), text: sampleJSON }
 // 		])
-
 
 // 	}, 1000);
 // });

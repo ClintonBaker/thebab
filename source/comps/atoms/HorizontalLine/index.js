@@ -1,1 +1,1 @@
-export HorizontalLine from './HorizontalLine'
+export HorizontalLine from './HorizontalLine';

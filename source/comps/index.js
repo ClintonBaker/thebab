@@ -1,2 +1,2 @@
-export Navbar from './Navbar'
-export ErrorBoundary from './ErrorBoundary'
+export Navbar from './Navbar';
+export ErrorBoundary from './ErrorBoundary';

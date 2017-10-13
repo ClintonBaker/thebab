@@ -1,12 +1,8 @@
-import React from 'react'
-import './styles/Browse.css'
+import React from 'react';
+import './styles/Browse.css';
 
 const Browse = (props: PropsT) => {
-	return (
-		<div styleName='Browse'>
+	return <div styleName="Browse" />;
+};
 
-		</div>
-	)
-}
-
-export default Browse
+export default Browse;

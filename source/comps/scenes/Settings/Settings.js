@@ -1,12 +1,8 @@
-import React from 'react'
-import './styles/Settings.css'
+import React from 'react';
+import './styles/Settings.css';
 
 const Settings = (props: PropsT) => {
-	return (
-		<div styleName='Settings'>
+	return <div styleName="Settings" />;
+};
 
-		</div>
-	)
-}
-
-export default Settings
+export default Settings;

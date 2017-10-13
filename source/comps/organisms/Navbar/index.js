@@ -1,13 +1,13 @@
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
 
-import Navbar from './Navbar'
-import * as userActions from '@store/actions/users'
+import Navbar from './Navbar';
+import * as userActions from '@store/actions/users';
 
 const mapStateToProps = state => {
 	return {
 		session: state.session
-	}
-}
+	};
+};
 
 const mapActionsToProps = dispatch => {
 	return {
@@ -16,10 +16,7 @@ const mapActionsToProps = dispatch => {
 				// console.log('hello, fucker.')
 			}
 		}
-	}
-}
+	};
+};
 
-export default connect(
-	mapStateToProps,
-	mapActionsToProps
-)(Navbar)
+export default connect(mapStateToProps, mapActionsToProps)(Navbar);

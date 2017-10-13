@@ -9,8 +9,8 @@ module.exports = {
 	"globals_path": "",
 
 	"selenium": {
-		"start_process": true,
-		"server_path": "/Users/sg0301153/Code/thebab/automation/_dependencies/selenium-server-standalone-3.0.1.jar",
+		"start_process": false,
+		"server_path": "./automation/_dependencies/selenium-server-standalone-3.0.1.jar",
 		"log_path": "",
 		"port": 4444,
 		"cli_args": {

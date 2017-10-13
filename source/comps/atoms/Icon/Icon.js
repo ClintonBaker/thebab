@@ -1,12 +1,8 @@
-import React from 'react'
-import './styles/Icon.css'
+import React from 'react';
+import './styles/Icon.css';
 
 const Icon = (props: PropsT) => {
-	return (
-		<div styleName='Icon'>
+	return <div styleName="Icon" />;
+};
 
-		</div>
-	)
-}
-
-export default Icon
+export default Icon;

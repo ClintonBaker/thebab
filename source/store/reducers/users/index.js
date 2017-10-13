@@ -1,13 +1,13 @@
-import { GET_USERS, CLEAR_USERS } from '../../consts/users'
+import { GET_USERS, CLEAR_USERS } from '../../consts/users';
 
-const initialState = []
+const initialState = [];
 
 export default (state = initialState, action) => {
 	if (action.type === GET_USERS) {
-		return [...action.data.users]
+		return [...action.data.users];
 	} else if (action.type === CLEAR_USERS) {
-		return []
+		return [];
 	} else {
-		return state
+		return state;
 	}
-}
+};

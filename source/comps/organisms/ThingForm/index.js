@@ -14,14 +14,11 @@ const mapStateToProps = state => {
 const mapActionsToProps = dispatch => {
 	return {
 		actions: {
-      postThing( form ) {
-        dispatch(postThing( form ));
+			postThing(form) {
+				dispatch(postThing(form));
 			}
 		}
-	}
-}
+	};
+};
 
-export default connect(
-	mapStateToProps,
-	mapActionsToProps
-)(ThingForm)
+export default connect(mapStateToProps, mapActionsToProps)(ThingForm);

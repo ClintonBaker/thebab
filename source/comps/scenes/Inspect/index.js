@@ -1,1 +1,1 @@
-export Inspect from './Inspect'
+export Inspect from './Inspect';

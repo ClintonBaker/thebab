@@ -49,11 +49,7 @@ class ThingForm extends React.Component {
 		return (
 			<div styleName="ThingForm">
 				<form>
-					<Name
-						name="name"
-						value={this.state.name}
-						updateInput={this.updateInput}
-					/>
+					<Name name="name" value={this.state.name} updateInput={this.updateInput} />
 					<ThingLink
 						name="thinglink"
 						value={this.state.thinglink}
@@ -64,11 +60,7 @@ class ThingForm extends React.Component {
 						value={this.state.description}
 						updateInput={this.updateInput}
 					/>
-					<Tagz
-						name="tagz"
-						value={this.state.tagz}
-						updateInput={this.updateInput}
-					/>
+					<Tagz name="tagz" value={this.state.tagz} updateInput={this.updateInput} />
 					<button onClick={this.submitForm}>Submit</button>
 				</form>
 			</div>

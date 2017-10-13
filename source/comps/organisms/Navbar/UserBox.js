@@ -1,10 +1,10 @@
-import React from 'react'
+import React from 'react';
 
-import './styles/UserBox.css'
+import './styles/UserBox.css';
 
-const UserBox = (props) => {
+const UserBox = props => {
 	return (
-		<div styleName='UserBox'>
+		<div styleName="UserBox">
 			<Choose>
 				<When condition={props.loggedIn}>
 					<p>Log Out</p>
@@ -15,7 +15,7 @@ const UserBox = (props) => {
 				</Otherwise>
 			</Choose>
 		</div>
-	)
-}
+	);
+};
 
-export default UserBox
+export default UserBox;

@@ -19,6 +19,4 @@ const mapStateToProps = state => {
 // 	}
 // }
 
-export default connect(
-	mapStateToProps
-)(Submit)
+export default connect(mapStateToProps)(Submit);
