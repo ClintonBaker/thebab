@@ -7,7 +7,7 @@ const Navbar = props => {
 	return (
 		<nav styleName="Navbar" e2e="Navbar">
 			<div styleName="logoBox">
-				<h2 e2e="logo">thebab</h2>
+				<h2 styleName="logo">thebab</h2>
 			</div>
 			<div styleName="linksBox">
 				<p>home</p>

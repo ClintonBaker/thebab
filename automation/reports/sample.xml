@@ -5,9 +5,9 @@
 
   <testsuite name="sample"
     errors="1" failures="0" hostname="" id="" package="sample" skipped="0"
-    tests="1" time="0.07300" timestamp="Fri, 13 Oct 2017 08:05:30 GMT">
+    tests="1" time="0.1220" timestamp="Fri, 13 Oct 2017 09:21:04 GMT">
   
-    <testcase name="Home_Scene" classname="sample" time="0.07300" assertions="0">
+    <testcase name="Home_Scene" classname="sample" time="0.1220" assertions="0">
     </testcase>
   
 
@@ -15,8 +15,13 @@
     <system-err>
         Error while running [Sample / Home_Scene]:
 
-  TypeError: require(...) is not a function
-    at Object.Home_Scene (/Users/sg0301153/Code/thebab/automation/tests/sample.js:5:15)
+  ReferenceError: string is not defined
+    at Home.checkIfElementContainsText (/Users/sg0301153/Code/thebab/automation/helpers/ComponentHelper.js:15:46)
+    at Home._this.$Navbar (/Users/sg0301153/Code/thebab/automation/helpers/scenes/Home/Home.js:11:8)
+    at /Users/sg0301153/Code/thebab/automation/helpers/ComponentHelper.js:10:4
+    at Array.map (&lt;anonymous&gt;)
+    at Home.runAssertions (/Users/sg0301153/Code/thebab/automation/helpers/ComponentHelper.js:9:61)
+    at Object.Home_Scene (/Users/sg0301153/Code/thebab/automation/tests/sample.js:9:7)
     at Module.call (/Users/sg0301153/Code/thebab/node_modules/nightwatch/lib/runner/module.js:62:34)
     at /Users/sg0301153/Code/thebab/node_modules/nightwatch/lib/runner/testcase.js:70:29
     at _fulfilled (/Users/sg0301153/Code/thebab/node_modules/nightwatch/node_modules/q/q.js:834:54)
