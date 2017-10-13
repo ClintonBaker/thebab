@@ -5,7 +5,7 @@ import { ThingForm } from '@comps/organisms';
 
 class Submit extends React.Component {
 	componentDidUpdate() {
-		this.props.FormPosted ? this.props.router.push('/inspect/' + this.props.ID) : null;
+		this.props.FormPosted && this.props.router.push('/inspect/' + this.props.ID);
 	}
 
 	render() {

@@ -23,8 +23,11 @@
 			"./node_modules/.bin/nightwatch --config ./automation/config.js -t ./automation/tests/sample.js"
 	},
 	"lint-staged": {
-		"*": ["prettier", "git add"]
+		"*.js": ["prettier", "git add"]
 	},
+	"pre-commit": [
+		"npm test"
+	],
 	"dependencies": {
 		"babel-polyfill": "^7.0.0-beta.2",
 		"cors": "^2.8.4",
