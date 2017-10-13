@@ -1,6 +1,7 @@
 import React from 'react';
 import './styles/Home.css';
 
+import { Link } from 'react-router';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as userActions from '@store/actions/users';
@@ -23,6 +24,7 @@ const Home = (props: PropsT) => {
 				{/* <p>Libraries, frameworks, courses and more. We got the toolz.</p> */}
 				<InputBox buttonText="Sign Up" placeholder="Email address" />
 			</div>
+			<Link className='SubmitLink' to='/submit'>New Thing</Link>
 			{/* <button onClick={props.actions.getUsers}>GET THE USERS</button> */}
 			{/* <button onClick={props.actions.clearUsers}>GET THE USERS</button> */}
 		</div>
