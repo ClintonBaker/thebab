@@ -6,7 +6,8 @@ import { getUsers } from '@store/actions/users';
 const mapStateToProps = state => {
 	// console.log(state);
 	return {
-		FormPosted: state.things.FormPosted
+		FormPosted: state.things.FormPosted,
+		ID: state.things.ID
 	};
 };
 

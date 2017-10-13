@@ -18,7 +18,7 @@ export default ( form ) => {
       // console.log(json);
       dispatch({
         type: POST_THING,
-        data: 'Form Posted'
+        data: json.id
       });
     }).catch( error => {
       // console.log('We had some issues...');
