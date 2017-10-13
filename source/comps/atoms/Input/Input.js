@@ -1,9 +1,9 @@
-import React from 'react'
-import './styles/Input.css'
+import React from 'react';
+import './styles/Input.css';
 
 const Input = (props: PropsT) => {
 	return (
-		<div styleName='Input'>
+		<div styleName="Input">
 			<input
 				value={props.value}
 				defaultValue={props.defaultValue}
@@ -11,7 +11,7 @@ const Input = (props: PropsT) => {
 				required={props.required}
 			/>
 		</div>
-	)
-}
+	);
+};
 
-export default Input
+export default Input;
