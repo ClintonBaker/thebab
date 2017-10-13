@@ -5,18 +5,18 @@
 
   <testsuite name="sample"
     errors="1" failures="0" hostname="" id="" package="sample" skipped="0"
-    tests="1" time="0.009000" timestamp="Fri, 13 Oct 2017 03:50:47 GMT">
+    tests="1" time="0.07300" timestamp="Fri, 13 Oct 2017 08:05:30 GMT">
   
-    <testcase name="HomeSceneTest" classname="sample" time="0.009000" assertions="0">
+    <testcase name="Home_Scene" classname="sample" time="0.07300" assertions="0">
     </testcase>
   
 
   
     <system-err>
-        Error while running [Sample / HomeSceneTest]:
+        Error while running [Sample / Home_Scene]:
 
-  ReferenceError: browser is not defined
-    at Object.HomeSceneTest (/Users/sg0301153/Code/thebab/automation/tests/sample.js:4:2)
+  TypeError: require(...) is not a function
+    at Object.Home_Scene (/Users/sg0301153/Code/thebab/automation/tests/sample.js:5:15)
     at Module.call (/Users/sg0301153/Code/thebab/node_modules/nightwatch/lib/runner/module.js:62:34)
     at /Users/sg0301153/Code/thebab/node_modules/nightwatch/lib/runner/testcase.js:70:29
     at _fulfilled (/Users/sg0301153/Code/thebab/node_modules/nightwatch/node_modules/q/q.js:834:54)
@@ -26,6 +26,7 @@
     at runSingle (/Users/sg0301153/Code/thebab/node_modules/nightwatch/node_modules/q/q.js:137:13)
     at flush (/Users/sg0301153/Code/thebab/node_modules/nightwatch/node_modules/q/q.js:125:13)
     at _combinedTickCallback (internal/process/next_tick.js:131:7)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
     </system-err>
   
 

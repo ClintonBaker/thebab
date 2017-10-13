@@ -1,13 +1,12 @@
-const Home_Scene = (Browser) => {
-	console.log(111)
-	Browser.url('http://localhost:8080')
-	console.log(111)
-	Browser.pause(1500);
-	console.log(111)
-	Browser.waitForElementVisible('body', 1000);
-	Browser.assert.containsText('.logoBox_Navbar > h2', 'thebab')
+import * as Scenes from '../comps/scenes';
+
+const Home_Scene = Browser => {
+	const Home = new Scenes.Home(Browser);
+	Browser.url('http://localhost:8080');
+	Home.waitForHomeToLoad();
+	Browser.assert.containsText(Home.logo, 'thebab');
 	Browser.end();
-}
+};
 
 export default {
 	Home_Scene
