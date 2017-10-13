@@ -1,0 +1,19 @@
+.InlineButton {
+	height: 40px;
+	padding: 1rem;
+	border-radius: .4rem;
+	color: color-white0;
+	background-color: #00d090;
+	display: inline;
+	font-family: mainFontBold;
+	font-weight: 600;
+	line-height: 1;
+	letter-spacing: .02rem;
+	text-decoration: none;
+	transition: all .3s;
+	font-size: 1.6rem;
+
+	&:hover {
+		background: #00da97;
+	}
+}

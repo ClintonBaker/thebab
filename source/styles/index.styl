@@ -10,20 +10,30 @@
 html {
 	font-size: 10px;
 	font-family: 'ProximaNova', serif;
+	// letter-spacing: 1px;
 }
 
 body {
   background: color-white0;
 	overflow-x: hidden;
 	color: color-dark0;
-	layout: column;
-	content-y: center;
-	content-x: center;
 	background-color: #fff;
 	// font-family: 'Helvetica Neue', 'Helvetica' , 'Arial' ,sans-serif;
 	font-weight: 400;
 	font-size: 1.6rem;
 	line-height: 1.2;
+}
+
+h1 {
+	font-size: 3.9rem;
+}
+
+h2 {
+	font-size: 3.2rem;
+}
+
+h3 {
+	font-size: 2.5rem;
 }
 
 :global header {
@@ -35,10 +45,21 @@ body {
   left: -15vw;
   top: -25px;
   transform: rotate(-2deg);
+	z-index: -1;
 }
 
-:global .test0 {
-	box-shadow: shadow0;
-	border-radius: 6px;
-	padding: 2rem 5rem;
+input {
+	border: 0;
+	outline: 0;
+	box-sizing: border-box;
+}
+
+button {
+	border: 0;
+	outline: 0;
+	cursor: pointer;
+}
+
+a {
+	cursor: pointer;
 }
