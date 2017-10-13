@@ -5,23 +5,26 @@
 	"description": "fuck you",
 	"scripts": {
 		"test": "ava",
-		"compile-server": "./node_modules/.bin/babel ./server/source --out-dir ./server/build",
+		"compile-server":
+			"./node_modules/.bin/babel ./server/source --out-dir ./server/build",
 		"nodemon": "./node_modules/.bin/nodemon",
 		"server:start": "node  ./server/init",
-		"start": "node -r babel-register ./node_modules/.bin/webpack-dev-server --config ./webpack/dev.js --content-base ./build",
-		"build": "node -r babel-register ./node_modules/.bin/webpack --watch --config ./webpack/dev.js & http-server ./build",
+		"start":
+			"node -r babel-register ./node_modules/.bin/webpack-dev-server --config ./webpack/dev.js --content-base ./build",
+		"build":
+			"node -r babel-register ./node_modules/.bin/webpack --watch --config ./webpack/dev.js & http-server ./build",
 		"remmy": "./node_modules/.bin/remmy",
 		"precommit": "lint-staged",
-		"prettier": "./node_modules/.bin/prettier --config ./prettier.js --write '{source,__{tests,mocks}__}/**/*.js'",
-		"selenium": "java -jar ./automation/_dependencies/selenium-server-standalone-3.0.1.jar",
-		"nightwatch": "./node_modules/.bin/nightwatch --config ./automation/config.js -t ./automation/tests/sample.js"
+		"prettier":
+			"./node_modules/.bin/prettier --config ./prettier.js --write '{source,__{tests,mocks}__}/**/*.js'",
+		"selenium":
+			"java -jar ./automation/_dependencies/selenium-server-standalone-3.0.1.jar",
+		"nightwatch":
+			"./node_modules/.bin/nightwatch --config ./automation/config.js -t ./automation/tests/sample.js"
 	},
 	"lint-staged": {
-    "*.js": [
-      "npm run prettier",
-      "git add"
-    ]
-  },
+		"*": ["npm run prettier", "git add"]
+	},
 	"dependencies": {
 		"babel-polyfill": "^7.0.0-beta.2",
 		"cors": "^2.8.4",
@@ -131,20 +134,12 @@
 				}
 			]
 		],
-		"presets": [
-			"env",
-			"flow",
-			"react",
-			"stage-0"
-		]
+		"presets": ["env", "flow", "react", "stage-0"]
 	},
 	"ava": {
 		"verbose": true,
 		"tap": false,
-		"require": [
-			"babel-register",
-			"ignore-styles"
-		],
+		"require": ["babel-register", "ignore-styles"],
 		"babel": "inherit",
 		"files": "source/**/*.test.js"
 	},
@@ -152,11 +147,7 @@
 		"type": "git",
 		"url": "git+https://github.com/colshacol/thebab.git"
 	},
-	"keywords": [
-		"react",
-		"webpack",
-		"redux"
-	],
+	"keywords": ["react", "webpack", "redux"],
 	"bugs": {
 		"url": "https://github.com/colshacol/thebab/issues"
 	},
