@@ -8,10 +8,23 @@ import Tagz from './Tagz';
 
 class ThingForm extends React.Component {
 	state = {
+		FormPosted: '',
 		name: '',
 		thinglink: '',
 		description: '',
 		tagz: ''
+	};
+
+	clearForm = () => {
+		this.setState( state => {
+			return {
+				FormPosted: '',
+				name: '',
+				thinglink: '',
+				description: '',
+				tagz: ''
+			}
+		});
 	};
 
 	updateInput = ({ target: { name, value } }) => {
@@ -22,7 +35,14 @@ class ThingForm extends React.Component {
 
 	submitForm = ( e ) => {
 		e.preventDefault();
-		console.log('Woosh! Magical submit logic happened!');
+		this.props.actions.PostForm({
+			name: this.state.name,
+			thinglink: this.state.thinglink,
+			description: this.state.description,
+			tagz: this.state.tagz
+		});
+		this.clearForm();
+		
 	}
 
 	render(){

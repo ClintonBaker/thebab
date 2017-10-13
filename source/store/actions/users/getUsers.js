@@ -7,7 +7,7 @@ export default () => {
 		console.log('getting users')
 		const response = await fetch(GET_USERS_ENDPOINT)
 		const users = await response.json()
-		dispatch({
+		return({
 			type: GET_USERS,
 			data: {
 				users
