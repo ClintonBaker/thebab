@@ -4,32 +4,26 @@
 
 # Development Instructions
 
-It is suggested that you use `nvm` to manage your Node versions. To install `nvm`:
-```
-npm i -g nvm
-```
-Next, install the versions of Node you wish to work with:
-```
-nvm install 8.6.0
-nvm install 6.9.2
-// etc...
-```
-
-### Running thebab Locally
-
 ```
 git clone https://github.com/colshacol/thebab
 cd thebab
-nvm use
 npm i
 npm start
 ```
 
-### Other Tools of Interest
-`ntl` is a tool that will list your `npm` scripts for you to choose to execute.
-```
-npm i -g ntl
-ntl
-```
+**To run automation tests:**
+<br/>
+_Open two terminals._
+1. `npm run selenium`
+2. `npm run nightwatch`
 
-![ntl example](/docs/images/ntl-example.png?raw=true)
+**To run unit tests:**
+<br/>
+`npm run test`
+
+
+**To run prettier:**
+<br/>
+_Runs automatically on commit._
+<br/>
+`npm run prettier`
