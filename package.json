@@ -15,6 +15,7 @@
 			"node -r babel-register ./node_modules/.bin/webpack --watch --config ./webpack/dev.js & http-server ./build",
 		"remmy": "./node_modules/.bin/remmy",
 		"precommit": "lint-staged",
+		"prepush": "npm test",
 		"prettier":
 			"./node_modules/.bin/prettier --config ./prettier.js --write '{source,__{tests,mocks}__}/**/*.js'",
 		"selenium":
@@ -25,9 +26,6 @@
 	"lint-staged": {
 		"*.js": ["prettier", "git add"]
 	},
-	"pre-commit": [
-		"npm test"
-	],
 	"dependencies": {
 		"babel-polyfill": "^7.0.0-beta.2",
 		"cors": "^2.8.4",
