@@ -1,4 +1,5 @@
 import React from 'react'
+import { Redirect } from 'react-router'
 import './styles/ThingForm.css'
 
 import Name from './Name';
@@ -14,6 +15,12 @@ class ThingForm extends React.Component {
 		description: '',
 		tagz: ''
 	};
+
+	componentDidUpdate() {
+		this.props.FormPosted
+	  ? this.props.redirect( true )
+		: null;
+	}
 
 	clearForm = () => {
 		this.setState( state => {
