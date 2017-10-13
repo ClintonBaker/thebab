@@ -1,9 +1,6 @@
-import selectors from './selectors';
-
 export default class Home {
 	constructor(browser) {
 		this.browser = browser;
-		this.selectors = selectors;
 	}
 
 	waitForHomeToLoad() {
