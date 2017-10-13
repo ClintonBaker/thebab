@@ -1,6 +1,6 @@
-import React from 'react'
-import { Redirect } from 'react-router'
-import './styles/ThingForm.css'
+import React from 'react';
+import { Redirect } from 'react-router';
+import './styles/ThingForm.css';
 
 import Name from './Name';
 import ThingLink from './ThingLink';
@@ -16,13 +16,13 @@ class ThingForm extends React.Component {
 	};
 
 	clearForm = () => {
-		this.setState( state => {
+		this.setState(state => {
 			return {
 				name: '',
 				thinglink: '',
 				description: '',
 				tagz: ''
-			}
+			};
 		});
 	};
 
@@ -32,7 +32,7 @@ class ThingForm extends React.Component {
 		});
 	};
 
-	submitForm = ( e ) => {
+	submitForm = e => {
 		e.preventDefault();
 		this.props.actions.postThing({
 			name: this.state.name,
@@ -41,22 +41,29 @@ class ThingForm extends React.Component {
 			tagz: this.state.tagz
 		});
 		this.clearForm();
-		
-	}
+	};
 
-	render(){
+	render() {
 		return (
-			<div styleName='ThingForm'>
+			<div styleName="ThingForm">
 				<form>
-					<Name name='name' value={ this.state.name } updateInput={ this.updateInput } />
-					<ThingLink name='thinglink' value={ this.state.thinglink } updateInput={ this.updateInput } />
-					<Description name='description' value={ this.state.description } updateInput={ this.updateInput } />
-					<Tagz name='tagz' value={ this.state.tagz } updateInput={ this.updateInput } />
-					<button onClick={ this.submitForm } >Submit</button>
+					<Name name="name" value={this.state.name} updateInput={this.updateInput} />
+					<ThingLink
+						name="thinglink"
+						value={this.state.thinglink}
+						updateInput={this.updateInput}
+					/>
+					<Description
+						name="description"
+						value={this.state.description}
+						updateInput={this.updateInput}
+					/>
+					<Tagz name="tagz" value={this.state.tagz} updateInput={this.updateInput} />
+					<button onClick={this.submitForm}>Submit</button>
 				</form>
 			</div>
-		)
+		);
 	}
 }
 
-export default ThingForm
+export default ThingForm;

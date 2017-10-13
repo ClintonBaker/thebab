@@ -12,7 +12,7 @@ const App = props => {
 			<Navbar />
 			<Router history={browserHistory}>
 				<Route path="/">
-					<IndexRoute component={Submit} />
+					<IndexRoute component={Home} />
 
 					<Route path="/account">
 						<IndexRoute component={Profile} />
