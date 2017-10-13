@@ -11,5 +11,5 @@ applyMiddleware(app);
 applyRouter(app);
 
 app.listen(PORT, () => {
-	console.log(`App running at http://localhost:${PORT}`);
+	// console.log(`App running at http://localhost:${PORT}`);
 });

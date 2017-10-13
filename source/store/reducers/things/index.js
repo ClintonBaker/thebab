@@ -6,7 +6,7 @@ export default (state = initialState, action) => {
   if(action.type === POST_THING){
     return {  ...state, FormPosted: true  };
   } else {
-    console.log(state);
+    // console.log(state);
     return state;
   }
 };

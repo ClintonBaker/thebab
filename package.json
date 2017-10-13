@@ -1,97 +1,160 @@
 {
-  "name": "thebab",
-  "version": "0.0.0",
-  "main": "server/index.js",
-  "description": "fuck you",
-  "scripts": {
-    "test": "ava",
-    "compile-server": "./node_modules/.bin/babel ./server/source --out-dir ./server/build",
-    "nodemon": "./node_modules/.bin/nodemon",
-    "server:start": "node  ./server/init",
-    "start": "node -r babel-register ./node_modules/.bin/webpack-dev-server --config ./webpack/dev.js --content-base ./build",
-    "build": "node -r babel-register ./node_modules/.bin/webpack --watch --config ./webpack/dev.js & http-server ./build",
+	"name": "thebab",
+	"version": "0.0.0",
+	"main": "server/index.js",
+	"description": "fuck you",
+	"scripts": {
+		"test": "ava",
+		"compile-server": "./node_modules/.bin/babel ./server/source --out-dir ./server/build",
+		"nodemon": "./node_modules/.bin/nodemon",
+		"server:start": "node  ./server/init",
+		"start": "node -r babel-register ./node_modules/.bin/webpack-dev-server --config ./webpack/dev.js --content-base ./build",
+		"build": "node -r babel-register ./node_modules/.bin/webpack --watch --config ./webpack/dev.js & http-server ./build",
 		"remmy": "./node_modules/.bin/remmy",
 		"selenium": "java -jar ./automation/files/selenium-server-standalone-3.0.1.jar",
-    "nightwatch": "./node_modules/.bin/nightwatch --config ./automation/config.js -t ./automation/tests/sample.js"
-  },
-  "dependencies": {
-    "babel-polyfill": "^7.0.0-beta.2",
-    "cors": "^2.8.4",
-    "dotenv": "^4.0.0",
-    "express": "^4.16.2",
-    "flat": "^4.0.0",
-    "mongojs": "^2.4.1",
-    "morgan": "^1.9.0",
-    "prettier": "^1.6.0",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
-    "react-redux": "^5.0.6",
-    "react-router": "^3.0.5",
-    "redux": "^3.7.2",
-    "redux-thunk": "^2.2.0",
-    "regenerator-runtime": "^0.11.0"
-  },
-  "devDependencies": {
-    "autoprefixer": "^7.1.4",
-    "ava": "^0.22.0",
-    "babel-cli": "^7.0.0-beta.2",
-    "babel-core": "^7.0.0-beta.2",
-    "babel-loader": "^7.1.2",
-    "babel-plugin-flow-runtime": "^0.11.1",
-    "babel-plugin-react-css-modules": "^3.3.0",
-    "babel-plugin-react-html-attrs": "^2.0.0",
-    "babel-plugin-sitrep": "^1.2.3",
-    "babel-plugin-transform-class-properties": "^7.0.0-beta.2",
-    "babel-plugin-transform-decorators": "^7.0.0-beta.2",
-    "babel-plugin-transform-inline-environment-variables": "^0.2.0",
-    "babel-plugin-transform-optional-chaining": "^7.0.0-beta.2",
-    "babel-plugin-transform-react-display-name": "^7.0.0-beta.2",
-    "babel-preset-env": "^2.0.0-beta.2",
-    "babel-preset-flow": "^7.0.0-beta.2",
-    "babel-preset-react": "^7.0.0-beta.2",
-    "babel-preset-stage-0": "^7.0.0-beta.2",
-    "babel-register": "^7.0.0-beta.2",
-    "chromedriver": "^2.33.1",
-    "clean-webpack-plugin": "^0.1.16",
-    "copy-webpack-plugin": "^4.0.1",
-    "css-loader": "^0.28.7",
-    "cypress": "^1.0.1",
-    "enzyme": "^3.1.0",
-    "extract-text-webpack-plugin": "^3.0.0",
-    "file-loader": "^1.1.5",
-    "flow-runtime": "^0.14.0",
-    "json-loader": "^0.5.7",
-    "jsx-control-statements": "^3.2.6",
-    "nightwatch": "^0.9.16",
-    "nodemon": "^1.12.1",
-    "postcss": "^6.0.13",
-    "postcss-loader": "^2.0.6",
-    "puppeteer": "^0.11.0",
-    "remmy": "^1.0.5",
-    "style-loader": "^0.18.2",
-    "stylus": "^0.54.5",
-    "stylus-loader": "^3.0.1",
-    "url-loader": "^0.6.2",
-    "wdio-cucumber-framework": "^1.0.2",
-    "wdio-mocha-framework": "^0.5.11",
-    "wdio-selenium-standalone-service": "0.0.9",
-    "webdriverio": "^4.8.0",
-    "webpack": "^3.6.0",
-    "webpack-dev-server": "^2.8.2"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/colshacol/thebab.git"
-  },
-  "keywords": [
-    "react",
-    "webpack",
-    "redux"
-  ],
-  "bugs": {
-    "url": "https://github.com/colshacol/thebab/issues"
-  },
-  "homepage": "https://github.com/colshacol/thebab#readme",
-  "author": "Colton Colcleasure <colshacol@gmail.com>",
-  "license": "ISC"
+		"nightwatch": "./node_modules/.bin/nightwatch --config ./automation/config.js -t ./automation/tests/sample.js"
+	},
+	"pre-commit": [
+		"test"
+	],
+	"dependencies": {
+		"babel-polyfill": "^7.0.0-beta.2",
+		"cors": "^2.8.4",
+		"dotenv": "^4.0.0",
+		"express": "^4.16.2",
+		"flat": "^4.0.0",
+		"mongojs": "^2.4.1",
+		"morgan": "^1.9.0",
+		"prettier": "^1.6.0",
+		"react": "^16.0.0",
+		"react-dom": "^16.0.0",
+		"react-redux": "^5.0.6",
+		"react-router": "^3.0.5",
+		"redux": "^3.7.2",
+		"redux-thunk": "^2.2.0",
+		"regenerator-runtime": "^0.11.0"
+	},
+	"devDependencies": {
+		"autoprefixer": "^7.1.4",
+		"ava": "^0.22.0",
+		"babel-cli": "^7.0.0-beta.2",
+		"babel-core": "^7.0.0-beta.2",
+		"babel-loader": "^7.1.2",
+		"babel-plugin-flow-runtime": "^0.11.1",
+		"babel-plugin-jsx-control-statements": "^3.2.8",
+		"babel-plugin-react-css-modules": "^3.3.0",
+		"babel-plugin-react-html-attrs": "^2.0.0",
+		"babel-plugin-sitrep": "^1.2.3",
+		"babel-plugin-transform-class-properties": "^7.0.0-beta.2",
+		"babel-plugin-transform-decorators": "^7.0.0-beta.2",
+		"babel-plugin-transform-inline-environment-variables": "^0.2.0",
+		"babel-plugin-transform-optional-chaining": "^7.0.0-beta.2",
+		"babel-plugin-transform-react-display-name": "^7.0.0-beta.2",
+		"babel-plugin-webpack-alias": "^2.1.2",
+		"babel-preset-env": "^2.0.0-beta.2",
+		"babel-preset-flow": "^7.0.0-beta.2",
+		"babel-preset-react": "^7.0.0-beta.2",
+		"babel-preset-stage-0": "^7.0.0-beta.2",
+		"babel-register": "^7.0.0-beta.2",
+		"chromedriver": "^2.33.1",
+		"clean-webpack-plugin": "^0.1.16",
+		"copy-webpack-plugin": "^4.0.1",
+		"css-loader": "^0.28.7",
+		"cypress": "^1.0.1",
+		"enzyme": "^3.1.0",
+		"extract-text-webpack-plugin": "^3.0.0",
+		"file-loader": "^1.1.5",
+		"flow-runtime": "^0.14.0",
+		"ignore-styles": "^5.0.1",
+		"json-loader": "^0.5.7",
+		"nightwatch": "^0.9.16",
+		"nodemon": "^1.12.1",
+		"postcss": "^6.0.13",
+		"postcss-loader": "^2.0.6",
+		"pre-commit": "^1.2.2",
+		"precommit": "^1.2.2",
+		"puppeteer": "^0.11.0",
+		"remmy": "^1.0.5",
+		"style-loader": "^0.18.2",
+		"stylus": "^0.54.5",
+		"stylus-loader": "^3.0.1",
+		"url-loader": "^0.6.2",
+		"wdio-cucumber-framework": "^1.0.2",
+		"wdio-mocha-framework": "^0.5.11",
+		"wdio-selenium-standalone-service": "0.0.9",
+		"webdriverio": "^4.8.0",
+		"webpack": "^3.6.0",
+		"webpack-dev-server": "^2.8.2"
+	},
+	"babel": {
+		"plugins": [
+			"jsx-control-statements",
+			"transform-inline-environment-variables",
+			"react-html-attrs",
+			[
+				"webpack-alias",
+				{
+					"config": "${PWD}/webpack/dev.js"
+				}
+			],
+			[
+				"sitrep",
+				{
+					"label": "inspect"
+				}
+			],
+			[
+				"flow-runtime",
+				{
+					"assert": true,
+					"annotate": true
+				}
+			],
+			[
+				"react-css-modules",
+				{
+					"context": "./source/",
+					"generateScopedName": "[local]_[name]"
+				}
+			],
+			"transform-decorators",
+			[
+				"transform-class-properties",
+				{
+					"loose": true
+				}
+			]
+		],
+		"presets": [
+			"env",
+			"flow",
+			"react",
+			"stage-0"
+		]
+	},
+	"ava": {
+		"verbose": true,
+		"tap": false,
+		"require": [
+			"babel-register",
+			"ignore-styles"
+		],
+		"babel": "inherit",
+		"files": "source/**/*.test.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/colshacol/thebab.git"
+	},
+	"keywords": [
+		"react",
+		"webpack",
+		"redux"
+	],
+	"bugs": {
+		"url": "https://github.com/colshacol/thebab/issues"
+	},
+	"homepage": "https://github.com/colshacol/thebab#readme",
+	"author": "Colton Colcleasure <colshacol@gmail.com>",
+	"license": "ISC"
 }
