@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import ThingForm from './ThingForm';
-import { postThing } from '@store/actions/things';
+import { postThing }  from '@store/actions/things';
 
 const mapStateToProps = state => {
 	return {
