@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Inspect from './Inspect';
-import { getThing }  from '@store/actions/things';
+import { getThing } from '@store/actions/things';
 
 const mapStateToProps = state => {
     return {

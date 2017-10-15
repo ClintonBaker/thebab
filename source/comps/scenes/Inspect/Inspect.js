@@ -8,21 +8,19 @@ class Inspect extends React.Component {
 	};
 	
 	render(){
-		console.log(this.props.thing);
 		return (
 			<div styleName="Inspect">
-				{ 
-					this.props.thing 
-					? (
-						<div>
-							<h3>{this.props.thing.name}</h3>
-							<p>{this.props.thing.thinglink}</p>
-							<p>{this.props.thing.description}</p>
-							<small>{this.props.thing.tagz}</small>
-						</div>
-						)
-					: (<small>loading</small>)
-				}
+				<Choose>
+					<When condition={ this.props.thing }>
+						<h3>{this.props.thing.name}</h3>
+						<p>{this.props.thing.thinglink}</p>
+						<p>{this.props.thing.description}</p>
+						<small>{this.props.thing.tagz}</small>
+					</When>
+					<Otherwise>
+						<small>loading</small>
+					</Otherwise>
+				</Choose>
 			</div>
 		);
 	}

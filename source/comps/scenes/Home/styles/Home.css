@@ -24,7 +24,7 @@
 	color: color-white2;
 }
 
-a {
+.SubmitLink, a {
 	font-size: 12rem;
 	text-decoration: none;
 	border: 2px solid #55FF55;
