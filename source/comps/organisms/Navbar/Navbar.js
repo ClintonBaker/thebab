@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 import UserBox from './UserBox';
 import './styles/Navbar.css';
@@ -11,7 +12,9 @@ const Navbar = props => {
 			</div>
 			<div styleName="linksBox">
 				<p>home</p>
-				<p>browse</p>
+				<Link to='/browse'>
+					<p>browse</p>
+				</Link>
 				<p>latest</p>
 				<p>blog</p>
 			</div>
