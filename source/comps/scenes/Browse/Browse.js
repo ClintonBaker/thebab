@@ -7,10 +7,10 @@ class Browse extends React.Component {
 	}
 
 	render() {
-		console.log(this.props.things);
 		return (
-
-			<div styleName="Browse" />
+			<div styleName="Browse" >
+				<p>Lets browse some stuff!</p>
+			</div>
 		);
 	}
 };
