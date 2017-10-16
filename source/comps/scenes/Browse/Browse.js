@@ -24,7 +24,6 @@ class Browse extends React.Component {
 	}
 
 	render({ things } = this.state) {
-		console.log(things);
 		return (
 			<div styleName="Browse" >
 				<Choose>

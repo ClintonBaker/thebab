@@ -5,7 +5,6 @@ export default ID => {
   return async dispatch => {
     const response = await fetch(THING_ENDPOINT);
     const thing = await response.json();
-    console.log('Getting things');
     dispatch({
       type: GET_THING,
       data: thing
