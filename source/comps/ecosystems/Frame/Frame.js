@@ -3,11 +3,12 @@ import { Navbar } from '@comps/organisms';
 import './styles/Frame.css'
 
 class Frame extends React.Component {
+	componentWillMount() {
+		console.log(this.props);
+	}
 	render(){
-		console.log(props);
 		return (
 			<div styleName='Frame'>
-				<p>Here's some Frame Stuff!</p>
 				<Navbar/>
 				{
 					this.props.children
