@@ -5,11 +5,26 @@ import { ThingPrev } from '@comps/molecules';
 import './styles/Browse.css';
 
 class Browse extends React.Component {
+	state = {
+		things: []
+	};
+
 	componentWillMount(){
 		this.props.actions.getThings();
+	};
+
+	componentDidUpdate(prevProps){
+		prevProps.things !== this.props.things
+		? this.setState( state => {
+			return ({
+				things: this.props.things
+			});
+		})
+		: null;
 	}
 
-	render({ things } = this.props) {
+	render({ things } = this.state) {
+		console.log(things);
 		return (
 			<div styleName="Browse" >
 				<Choose>
