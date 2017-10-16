@@ -1,3 +1,4 @@
 .Browse {
-  layout: row;
+  display: flex;
+  flex-direction: column;
 }
