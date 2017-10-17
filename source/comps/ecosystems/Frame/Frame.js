@@ -3,11 +3,11 @@ import { Navbar } from '@comps/organisms';
 import './styles/Frame.css';
 
 class Frame extends Component {
-	render() {
+	render({ props, state } = this) {
 		return (
 			<div styleName="Frame">
-				<Navbar />
-				{this.props.children}
+				<Navbar onInnerPage={props.location.pathname !== '/'} />
+				{props.children}
 			</div>
 		);
 	}

@@ -7,6 +7,11 @@
 	height: 60px;
 	color: color-white0;
 	contain: 1199px 24px;
+	text-shadow: text-shadow1;
+}
+
+:global .Navbar-innerPage-true {
+	background: gradient0;
 }
 
 .logoBox {
