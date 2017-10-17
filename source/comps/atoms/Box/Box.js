@@ -4,7 +4,7 @@ import './styles/Box.css';
 type PropsT = {
 	padding?: string,
 	radius?: boolean,
-	background?: string
+	background?: string,
 };
 
 const Box = (props: PropsT) => {
@@ -20,7 +20,7 @@ const Box = (props: PropsT) => {
 Box.defaultProps = {
 	padding: '12px',
 	radius: true,
-	background: 'none'
+	background: 'none',
 };
 
 export default Box;

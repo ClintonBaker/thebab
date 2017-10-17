@@ -11,7 +11,7 @@ type PropsT = CorePropsT & {
 	required?: boolean,
 	onIconClick?: Function,
 	iconSize: string,
-	icon?: string
+	icon?: string,
 };
 
 const Input = (props: PropsT) => {
@@ -25,19 +25,14 @@ const Input = (props: PropsT) => {
 				value={props.value}
 			/>
 			<If condition={props.icon}>
-				<Icon
-					onClick={props.onIconClick}
-					size={props.iconSize}
-					name={props.icon}
-					styleName="icon"
-				/>
+				<Icon onClick={props.onIconClick} size={props.iconSize} name={props.icon} styleName="icon" />
 			</If>
 		</div>
 	);
 };
 
 Input.defaultProps = {
-	required: false
+	required: false,
 };
 
 export default Input;

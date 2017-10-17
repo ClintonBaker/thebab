@@ -22,5 +22,5 @@ export type CorePropsT = {
 	onKeyUp?: Function,
 	onCopy?: Function,
 	onCut?: Function,
-	onPaste?: Function
+	onPaste?: Function,
 };

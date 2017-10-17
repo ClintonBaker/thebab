@@ -4,7 +4,7 @@ import './styles/Icon.css';
 type PropsT = CorePropsT & {
 	className?: string,
 	name: string,
-	size?: string
+	size?: string,
 };
 
 const Icon = (props: PropsT) => {
@@ -18,7 +18,7 @@ const Icon = (props: PropsT) => {
 };
 
 Icon.defaultProps = {
-	size: 'md'
+	size: 'md',
 };
 
 export default Icon;

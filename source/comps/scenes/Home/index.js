@@ -7,7 +7,7 @@ import Home from './Home';
 
 const mapStateToProps = state => {
 	return {
-		users: state.users
+		users: state.users,
 	};
 };
 
@@ -19,8 +19,8 @@ const mapActionsToProps = dispatch => {
 			},
 			clearUsers() {
 				dispatch(userActions.clearUsers());
-			}
-		}
+			},
+		},
 	};
 };
 
