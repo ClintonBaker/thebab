@@ -12,7 +12,7 @@ const Navbar = props => {
 			</div>
 			<div styleName="linksBox">
 				<p>home</p>
-				<Link to='/browse'>
+				<Link to="/browse">
 					<p>browse</p>
 				</Link>
 				<p>latest</p>

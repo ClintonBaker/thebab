@@ -1,1 +1,1 @@
-export ThingPrev from './ThingPrev'
+export ThingPrev from './ThingPrev';
