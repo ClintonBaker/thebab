@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Redirect } from 'react-router';
 import { Input, Button } from '@comps';
 import './styles/ThingForm.css';
 
-class ThingForm extends React.Component {
+class ThingForm extends Component {
 	state = {
 		name: '',
 		link: '',
