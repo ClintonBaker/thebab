@@ -4,10 +4,6 @@
 	contain: 1199px 24px;
 }
 
-.green {
-	color: color-accent1;
-}
-
 .header {
 	height: 180px;
 	layout: column;

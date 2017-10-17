@@ -6,11 +6,15 @@
 	height: 40px;
 	min-height: 40px;
 	max-height: 40px;
-	display: inline-block;
+	display: inline-flex;
+	flex-wrap: nowrap;
 	cursor: pointer;
+	border-radius: 50px;
+	box-shadow: shadow1;
 }
 
 .Input input {
+	padding: 0 1rem 2px;
 	font-family: inputFont;
 	height: 100%;
 	width: 100%;
@@ -30,4 +34,8 @@
 		letter-spacing: .05rem;
 		line-height: 1.2;
 	}
+}
+
+.icon {
+	margin-right: 6px;
 }

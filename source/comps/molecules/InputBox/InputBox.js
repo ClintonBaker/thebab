@@ -1,5 +1,5 @@
 import React from 'react';
-import { Input, InlineButton } from '@comps/atoms';
+import { Input, Button } from '@comps/atoms';
 import './styles/InputBox.css';
 
 const InputBox = (props: PropsT) => {
@@ -10,7 +10,7 @@ const InputBox = (props: PropsT) => {
 				placeholder={props.placeholder}
 				defaultValue={props.defaultValue}
 			/>
-			<InlineButton>{props.buttonText}</InlineButton>
+			<Button>{props.buttonText}</Button>
 		</div>
 	);
 };

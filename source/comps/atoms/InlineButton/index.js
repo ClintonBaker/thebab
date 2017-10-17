@@ -1,1 +1,0 @@
-export InlineButton from './InlineButton';
