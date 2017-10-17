@@ -31,10 +31,9 @@ class Home extends React.PureComponent {
 	render({ props, state } = this) {
 		return (
 			<div styleName="Home">
-				<header />
 				<div styleName="header">
 					<Title>The Hub For Tooling Enthusiasts</Title>
-					<Box>
+					<Box padding="24px" width="400px">
 						<Input
 							onIconClick={this.getSearchResults}
 							onChange={this.setSearchValue}
