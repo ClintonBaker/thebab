@@ -25,6 +25,6 @@ color: color-dark2;
 .linksBox {
 	layout: row;
 	p {
-		margin: 0 6px;
+		margin: 0 12px;
 	}
 }
