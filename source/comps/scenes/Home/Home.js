@@ -10,7 +10,7 @@ import { InputBox } from '@comps/molecules';
 import Box from '@comps/atoms/Box';
 
 type PropsT = {
-	actions: Object
+	actions: Object,
 };
 
 class Home extends React.PureComponent {
@@ -19,7 +19,7 @@ class Home extends React.PureComponent {
 	setSearchValue = ({ target: { value } }) => {
 		this.setState(state => {
 			return {
-				searchValue: value
+				searchValue: value,
 			};
 		});
 	};
@@ -48,8 +48,6 @@ class Home extends React.PureComponent {
 				<Link styleName="SubmitLink" to="/submit">
 					New Thing
 				</Link>
-				{/* <button onClick={props.actions.getUsers}>GET THE USERS</button> */}
-				{/* <button onClick={props.actions.clearUsers}>GET THE USERS</button> */}
 			</div>
 		);
 	}

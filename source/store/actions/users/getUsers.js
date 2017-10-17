@@ -10,8 +10,8 @@ export default () => {
 		return {
 			type: GET_USERS,
 			data: {
-				users
-			}
+				users,
+			},
 		};
 	};
 };

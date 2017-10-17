@@ -12,7 +12,7 @@ class ThingForm extends React.Component {
 		name: '',
 		thinglink: '',
 		description: '',
-		tagz: ''
+		tagz: '',
 	};
 
 	clearForm = () => {
@@ -21,14 +21,14 @@ class ThingForm extends React.Component {
 				name: '',
 				thinglink: '',
 				description: '',
-				tagz: ''
+				tagz: '',
 			};
 		});
 	};
 
 	updateInput = ({ target: { name, value } }) => {
 		this.setState({
-			[name]: value
+			[name]: value,
 		});
 	};
 
@@ -38,7 +38,7 @@ class ThingForm extends React.Component {
 			name: this.state.name,
 			thinglink: this.state.thinglink,
 			description: this.state.description,
-			tagz: this.state.tagz
+			tagz: this.state.tagz,
 		});
 		this.clearForm();
 	};
@@ -48,16 +48,8 @@ class ThingForm extends React.Component {
 			<div styleName="ThingForm">
 				<form>
 					<Name name="name" value={this.state.name} updateInput={this.updateInput} />
-					<ThingLink
-						name="thinglink"
-						value={this.state.thinglink}
-						updateInput={this.updateInput}
-					/>
-					<Description
-						name="description"
-						value={this.state.description}
-						updateInput={this.updateInput}
-					/>
+					<ThingLink name="thinglink" value={this.state.thinglink} updateInput={this.updateInput} />
+					<Description name="description" value={this.state.description} updateInput={this.updateInput} />
 					<Tagz name="tagz" value={this.state.tagz} updateInput={this.updateInput} />
 					<button onClick={this.submitForm}>Submit</button>
 				</form>

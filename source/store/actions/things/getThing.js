@@ -7,7 +7,7 @@ export default ID => {
 		const thing = await response.json();
 		dispatch({
 			type: GET_THING,
-			data: thing
+			data: thing,
 		});
 	};
 };

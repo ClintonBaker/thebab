@@ -4,7 +4,7 @@ import { getThing } from '@store/actions/things';
 
 const mapStateToProps = state => {
 	return {
-		thing: state.things.thingData
+		thing: state.things.thingData,
 	};
 };
 
@@ -13,8 +13,8 @@ const mapActionsToProps = dispatch => {
 		actions: {
 			getThing(ID) {
 				dispatch(getThing(ID));
-			}
-		}
+			},
+		},
 	};
 };
 

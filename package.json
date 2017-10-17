@@ -5,25 +5,24 @@
 	"description": "fuck you",
 	"scripts": {
 		"test": "ava",
-		"compile-server":
-			"./node_modules/.bin/babel ./server/source --out-dir ./server/build",
+		"compile-server": "./node_modules/.bin/babel ./server/source --out-dir ./server/build",
 		"nodemon": "./node_modules/.bin/nodemon",
 		"server:start": "node  ./server/init",
-		"start":
-			"node -r babel-register ./node_modules/.bin/webpack-dev-server --config ./webpack/dev.js --content-base ./build",
-		"build":
-			"node -r babel-register ./node_modules/.bin/webpack --watch --config ./webpack/dev.js & http-server ./build",
+		"start": "node -r babel-register ./node_modules/.bin/webpack-dev-server --config ./webpack/dev.js --content-base ./build",
+		"build": "node -r babel-register ./node_modules/.bin/webpack --watch --config ./webpack/dev.js & http-server ./build",
 		"remmy": "./node_modules/.bin/remmy",
-		"precommit": "npm test && lint-staged",
-		"prettier":
-			"./node_modules/.bin/prettier --config ./prettier.js --write '{source,__{tests,mocks}__}/**/*.js'",
-		"selenium":
-			"java -jar ./automation/_dependencies/selenium-server-standalone-3.0.1.jar",
-		"nightwatch":
-			"./node_modules/.bin/nightwatch --config ./automation/config.js -t ./automation/tests/sample.js"
+		"precommit": "lint-staged",
+		"prepush": "npm test",
+		"lint": "./node_modules/.bin/eslint ./source --fix",
+		"prettier": "./node_modules/.bin/prettier --config ./prettier.js --write '{source,__{tests,mocks}__}/**/*.js'",
+		"selenium": "java -jar ./automation/_dependencies/selenium-server-standalone-3.0.1.jar",
+		"nightwatch": "./node_modules/.bin/nightwatch --config ./automation/config.js -t ./automation/tests/sample.js"
 	},
 	"lint-staged": {
-		"*.js": ["prettier", "git add"]
+		"*.js": [
+			"lint",
+			"git add"
+		]
 	},
 	"dependencies": {
 		"babel-polyfill": "^7.0.0-beta.2",
@@ -46,6 +45,7 @@
 		"ava": "^0.22.0",
 		"babel-cli": "^7.0.0-beta.2",
 		"babel-core": "^7.0.0-beta.2",
+		"babel-eslint": "^8.0.1",
 		"babel-loader": "^7.1.2",
 		"babel-plugin-flow-runtime": "^0.11.1",
 		"babel-plugin-jsx-control-statements": "^3.2.8",
@@ -69,6 +69,16 @@
 		"css-loader": "^0.28.7",
 		"cypress": "^1.0.1",
 		"enzyme": "^3.1.0",
+		"eslint": "^4.9.0",
+		"eslint-config-babel": "^7.0.2",
+		"eslint-config-prettier": "^2.6.0",
+		"eslint-config-standard": "^6.2.1",
+		"eslint-config-standard-react": "^4.2.0",
+		"eslint-plugin-jsx-control-statements": "^2.2.0",
+		"eslint-plugin-prettier": "^2.3.1",
+		"eslint-plugin-promise": "^3.4.0",
+		"eslint-plugin-react": "^6.10.0",
+		"eslint-plugin-standard": "^2.0.1",
 		"extract-text-webpack-plugin": "^3.0.0",
 		"file-loader": "^1.1.5",
 		"flow-runtime": "^0.14.0",
@@ -134,12 +144,20 @@
 				}
 			]
 		],
-		"presets": ["env", "flow", "react", "stage-0"]
+		"presets": [
+			"env",
+			"flow",
+			"react",
+			"stage-0"
+		]
 	},
 	"ava": {
 		"verbose": true,
 		"tap": false,
-		"require": ["babel-register", "ignore-styles"],
+		"require": [
+			"babel-register",
+			"ignore-styles"
+		],
 		"babel": "inherit",
 		"files": "source/**/*.test.js"
 	},
@@ -147,7 +165,11 @@
 		"type": "git",
 		"url": "git+https://github.com/colshacol/thebab.git"
 	},
-	"keywords": ["react", "webpack", "redux"],
+	"keywords": [
+		"react",
+		"webpack",
+		"redux"
+	],
 	"bugs": {
 		"url": "https://github.com/colshacol/thebab/issues"
 	},
