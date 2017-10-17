@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
 import './styles/Home.css';
 
 import { Link } from 'react-router';
@@ -7,49 +7,50 @@ import { connect } from 'react-redux';
 import * as userActions from '@store/actions/users';
 import { Title, Input, InlineButton } from '@comps/atoms';
 import { InputBox } from '@comps/molecules';
+import Box from '@comps/atoms/Box';
 
 type PropsT = {
 	actions: Object,
 };
 
-const Home = (props: PropsT) => {
-	// console.log({ props });
-	return (
-		<div styleName="Home">
-			<header />
-			<div styleName="header">
-				<Title>
-					The <span styleName="green">Hub</span> For Tooling Enthusiasts
-				</Title>
-				{/* <p>Libraries, frameworks, courses and more. We got the toolz.</p> */}
-				<InputBox buttonText="Sign Up" placeholder="Email address" />
+class Home extends React.PureComponent {
+	state = { searchValue: '' };
+
+	setSearchValue = ({ target: { value } }) => {
+		this.setState(state => {
+			return {
+				searchValue: value,
+			};
+		});
+	};
+
+	getSearchResults = () => {
+		console.log('getting dem shits');
+	};
+
+	render({ props, state } = this) {
+		return (
+			<div styleName="Home">
+				<header />
+				<div styleName="header">
+					<Title>The Hub For Tooling Enthusiasts</Title>
+					<Box>
+						<Input
+							onIconClick={this.getSearchResults}
+							onChange={this.setSearchValue}
+							placeholder="search query"
+							value={state.searchValue}
+							icon="search"
+							iconSize="lg"
+						/>
+					</Box>
+				</div>
+				<Link styleName="SubmitLink" to="/submit">
+					New Thing
+				</Link>
 			</div>
-			<Link styleName="SubmitLink" to="/submit">
-				New Thing
-			</Link>
-			{/* <button onClick={props.actions.getUsers}>GET THE USERS</button> */}
-			{/* <button onClick={props.actions.clearUsers}>GET THE USERS</button> */}
-		</div>
-	);
-};
+		);
+	}
+}
 
-const mapStateToProps = state => {
-	return {
-		users: state.users,
-	};
-};
-
-const mapActionsToProps = dispatch => {
-	return {
-		actions: {
-			getUsers() {
-				dispatch(userActions.getUsers());
-			},
-			clearUsers() {
-				dispatch(userActions.clearUsers());
-			},
-		},
-	};
-};
-
-export default connect(mapStateToProps, mapActionsToProps)(Home);
+export default Home;
