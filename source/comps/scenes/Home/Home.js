@@ -55,23 +55,4 @@ class Home extends React.PureComponent {
 	}
 }
 
-const mapStateToProps = state => {
-	return {
-		users: state.users
-	};
-};
-
-const mapActionsToProps = dispatch => {
-	return {
-		actions: {
-			getUsers() {
-				dispatch(userActions.getUsers());
-			},
-			clearUsers() {
-				dispatch(userActions.clearUsers());
-			}
-		}
-	};
-};
-
-export default connect(mapStateToProps, mapActionsToProps)(Home);
+export default Home;
