@@ -13,7 +13,7 @@
 		"remmy": "./node_modules/.bin/remmy",
 		"precommit": "lint-staged",
 		"prepush": "npm test",
-		"lint": "./node_modules/.bin/eslint ./source --fix",
+		"lint": "./node_modules/.bin/eslint --fix",
 		"prettier": "./node_modules/.bin/prettier --config ./prettier.js --write '{source,__{tests,mocks}__}/**/*.js'",
 		"selenium": "java -jar ./automation/_dependencies/selenium-server-standalone-3.0.1.jar",
 		"nightwatch": "./node_modules/.bin/nightwatch --config ./automation/config.js -t ./automation/tests/sample.js"
