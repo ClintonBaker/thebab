@@ -2,16 +2,15 @@ import React from 'react';
 import './styles/Inspect.css';
 
 class Inspect extends React.Component {
-
-	componentWillMount(){
+	componentWillMount() {
 		this.props.actions.getThing(this.props.params.id);
-	};
-	
-	render(){
+	}
+
+	render() {
 		return (
 			<div styleName="Inspect">
 				<Choose>
-					<When condition={ this.props.thing }>
+					<When condition={this.props.thing}>
 						<h3>{this.props.thing.name}</h3>
 						<p>{this.props.thing.thinglink}</p>
 						<p>{this.props.thing.description}</p>
@@ -24,6 +23,6 @@ class Inspect extends React.Component {
 			</div>
 		);
 	}
-};
+}
 
 export default Inspect;

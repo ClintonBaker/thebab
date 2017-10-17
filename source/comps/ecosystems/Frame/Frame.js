@@ -1,21 +1,19 @@
-import React from 'react'
+import React from 'react';
 import { Navbar } from '@comps/organisms';
-import './styles/Frame.css'
+import './styles/Frame.css';
 
 class Frame extends React.Component {
 	componentWillMount() {
 		console.log(this.props);
 	}
-	render(){
+	render() {
 		return (
-			<div styleName='Frame'>
-				<Navbar/>
-				{
-					this.props.children
-				}
+			<div styleName="Frame">
+				<Navbar />
+				{this.props.children}
 			</div>
-		)
+		);
 	}
 }
 
-export default Frame
+export default Frame;

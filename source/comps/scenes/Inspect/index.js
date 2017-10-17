@@ -3,10 +3,9 @@ import Inspect from './Inspect';
 import { getThing } from '@store/actions/things';
 
 const mapStateToProps = state => {
-    return {
-      thing: state.things.thingData
-    };
-
+	return {
+		thing: state.things.thingData
+	};
 };
 
 const mapActionsToProps = dispatch => {
