@@ -6,12 +6,16 @@ import './styles/Navbar.css';
 
 const Navbar = props => {
 	return (
-		<nav styleName="Navbar" e2e="Navbar">
+		<nav styleName="Navbar" className={`Navbar-innerPage-${props.onInnerPage}`} e2e="Navbar">
 			<div styleName="logoBox">
-				<h2 styleName="logo">thebab</h2>
+				<Link to="/">
+					<h3 styleName="logo">thebab</h3>
+				</Link>
 			</div>
 			<div styleName="linksBox">
-				<p>home</p>
+				<Link to="/">
+					<p>home</p>
+				</Link>
 				<Link to="/browse">
 					<p>browse</p>
 				</Link>

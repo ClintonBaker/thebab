@@ -5,13 +5,14 @@ type PropsT = {
 	padding?: string,
 	radius?: boolean,
 	background?: string,
+	width: string,
 };
 
 const Box = (props: PropsT) => {
-	const { padding, radius, background } = props;
+	const { padding, radius, background, width } = props;
 	const borderRadius = radius ? '3px' : '0px';
 	return (
-		<div styleName="Box" style={{ padding, borderRadius, background }}>
+		<div styleName="Box" style={{ width, padding, borderRadius, background }}>
 			{props.children}
 		</div>
 	);

@@ -5,8 +5,13 @@
 	padding: 0 24px;
 	width: 100vw;
 	height: 60px;
-	color: color-white0;
+	color: color-dark0;
 	contain: 1199px 24px;
+	// text-shadow: text-shadow1;
+}
+
+:global .Navbar-innerPage-true {
+	background: gradient0;
 }
 
 .logoBox {
@@ -14,7 +19,7 @@
 }
 
 .logo {
-
+color: color-dark2;
 }
 
 .linksBox {
