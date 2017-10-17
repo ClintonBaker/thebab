@@ -1,11 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Navbar } from '@comps/organisms';
 import './styles/Frame.css';
 
-class Frame extends React.Component {
-	componentWillMount() {
-		console.log(this.props);
-	}
+class Frame extends Component {
 	render() {
 		return (
 			<div styleName="Frame">

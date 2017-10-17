@@ -1,0 +1,1 @@
+export ThingPrev from './ThingPrev';
