@@ -6,8 +6,8 @@ import './styles/index.styl';
 import { store } from './store';
 
 ReactDOM.render(
-	<Provider store={store}>
-		<App />
-	</Provider>,
-	document.querySelector('mount')
+    <Provider store={store}>
+        <App />
+    </Provider>,
+    document.querySelector('mount')
 );
