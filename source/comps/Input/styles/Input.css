@@ -7,9 +7,9 @@
 	padding: 1rem;
 	background: color-white0;
 	border-radius: .4rem;
-	height: 40px;
-	min-height: 40px;
-	max-height: 40px;
+	height: 45px;
+	min-height: 45px;
+	max-height: 45px;
 	display: inline-flex;
 	flex-wrap: nowrap;
 	cursor: pointer;

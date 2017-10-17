@@ -9,7 +9,7 @@ const Navbar = props => {
 		<nav styleName="Navbar" className={`Navbar-innerPage-${props.onInnerPage}`} e2e="Navbar">
 			<div styleName="logoBox">
 				<Link to="/">
-					<h3 styleName="logo">thebab</h3>
+					<h3 styleName="logo" e2e='logo'>thebab</h3>
 				</Link>
 			</div>
 			<div styleName="linksBox">
