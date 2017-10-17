@@ -5,29 +5,9 @@
       "dest": "./source/comps"
 		},
 
-		"atom": {
-      "path": "./.remmy/atom",
-      "dest": "./source/comps/atoms"
-		},
-
-		"molecule": {
-      "path": "./.remmy/molecule",
-      "dest": "./source/comps/molecules"
-		},
-
-		"organism": {
-      "path": "./.remmy/organism",
-      "dest": "./source/comps/organisms"
-    },
-
-    "ecosystem": {
-      "path": "./.remmy/ecosystem",
-      "dest": "./source/comps/ecosystems"
-		},
-
 		"scene": {
       "path": "./.remmy/scene",
-      "dest": "./source/comps/scenes"
+      "dest": "./source/scenes"
 		}
   },
 
