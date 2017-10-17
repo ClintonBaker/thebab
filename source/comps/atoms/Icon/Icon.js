@@ -1,8 +1,24 @@
 import React from 'react';
 import './styles/Icon.css';
 
+type PropsT = CorePropsT & {
+	className?: string,
+	name: string,
+	size?: string,
+};
+
 const Icon = (props: PropsT) => {
-	return <div styleName="Icon" />;
+	return (
+		<i
+			className={`icon ion-${props.name} icon-${props.size} ${props.className}`}
+			onClick={props.onClick}
+			styleName="Icon"
+		/>
+	);
+};
+
+Icon.defaultProps = {
+	size: 'md',
 };
 
 export default Icon;

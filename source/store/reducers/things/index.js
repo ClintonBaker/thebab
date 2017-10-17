@@ -6,7 +6,7 @@ export default (state = initialState, action) => {
 	if (action.type === POST_THING) {
 		return { ...state, ID: action.data, FormPosted: true };
 	} else if (action.type === GET_THING) {
-		return { ...state, thingData: action.data }
+		return { ...state, thingData: action.data };
 	} else {
 		return state;
 	}

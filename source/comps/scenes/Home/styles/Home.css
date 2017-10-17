@@ -4,10 +4,6 @@
 	contain: 1199px 24px;
 }
 
-.green {
-	color: color-accent1;
-}
-
 .header {
 	height: 180px;
 	layout: column;
@@ -24,6 +20,13 @@
 	color: color-white2;
 }
 
-.SubmitLink {
-	layout: row;
+.SubmitLink, a {
+	font-size: 12rem;
+	text-decoration: none;
+	border: 2px solid #55FF55;
+	border-radius: 15px;
+	background: #55FF55;
+	color: white;
+	padding: 5px;
+	margin-top: 200px;
 }

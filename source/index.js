@@ -4,6 +4,7 @@ import React from 'react';
 import App from './App';
 import './styles/index.styl';
 import { store } from './store';
+import './types';
 
 ReactDOM.render(
 	<Provider store={store}>

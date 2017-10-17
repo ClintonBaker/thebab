@@ -4,7 +4,7 @@ import things from './things';
 
 const reducers = combineReducers({
 	users,
-	things
+	things,
 });
 
 export default reducers;

@@ -5,9 +5,9 @@ export default form => {
 		fetch('http://rest.learncode.academy/api/thebab/things', {
 			method: 'POST',
 			headers: {
-				'Content-Type': 'application/json'
+				'Content-Type': 'application/json',
 			},
-			body: JSON.stringify(form)
+			body: JSON.stringify(form),
 		})
 			.then(response => {
 				if (response.ok) {
@@ -18,7 +18,7 @@ export default form => {
 			.then(json => {
 				dispatch({
 					type: POST_THING,
-					data: json.id
+					data: json.id,
 				});
 			})
 			.catch(error => {

@@ -10,7 +10,7 @@ const App = props => {
 	return (
 		<div>
 			<Router history={browserHistory}>
-				<Route path="/" component={Frame} >
+				<Route path="/" component={Frame}>
 					<IndexRoute component={Home} />
 
 					<Route path="/account">
