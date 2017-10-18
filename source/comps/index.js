@@ -2,6 +2,7 @@ export ErrorBoundary from './ErrorBoundary';
 export ThingPrev from './ThingPrev';
 export Navbar from './Navbar';
 export ThingForm from './ThingForm';
+export SmallThing from './SmallThing';
 export Title from './Title';
 export Input from './Input';
 export Button from './Button';

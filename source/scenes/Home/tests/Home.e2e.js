@@ -1,17 +1,30 @@
-import Core from '@e2e/utils/Core';
+import Component, { generateSelectors } from '@e2e/utils/Component';
+import componentSelectors from './selectors.js';
 
-export default class Home extends Core {
-	waitForAllElementsToLoad() {
-		this.waitForElementVisible(this.elements.root);
-		this.waitForElementVisible(this.elements.title);
-		this.waitForElementVisible(this.elements.searchInput);
+export default (Browser) => {
+	const selectors = generateSelectors(componentSelectors);
+	class Home extends Component {
+		render() {
+			this.waitForAllElementsToLoad([
+				selectors.header,
+				selectors.title,
+				selectors.searchInput,
+				selectors.searchInputIcon,
+				selectors.submitLink
+			])
+		}
+
+		performSearch() {
+			this.setValueOf(selectors.searchInput).to('stuff');
+			this.expectValueOf(selectors.searchInput).toEqual('stuff');
+			Browser.click(selectors.searchInputIcon);
+			// TODO: finish this.
+		}
+
+		clickSubmitLink() {
+			Browser.click(selectors.submitLink);
+		}
 	}
 
-	elements = this.generateSelectors({
-		root: '[e2e=Home]',
-		title: '[e2e=title]',
-		header: '[e2e=header]',
-		searchInput: '[e2e=searchInput]',
-		submitLink: '[e2e=submitLink]'
-	});
+	return new Home(Browser);
 }

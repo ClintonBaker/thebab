@@ -8,6 +8,11 @@ module.exports = {
 	"page_objects_path": "",
 	"globals_path": "",
 
+	"request_timeout_options": {
+		"timeout": 10000,
+		"retry_attempts": 2
+	},
+
 	"selenium": {
 		"start_process": false,
 		"server_path": "./source/e2e/utils/_dependencies/selenium-server-standalone-3.0.1.jar",

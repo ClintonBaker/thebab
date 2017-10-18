@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="1"
+            failures="0"
+            tests="1">
+
+  <testsuite name="sample"
+    errors="1" failures="0" hostname="" id="" package="sample" skipped="0"
+    tests="1" time="0.07300" timestamp="Tue, 17 Oct 2017 17:24:30 GMT">
+  
+    <testcase name="default" classname="sample" time="0.07300" assertions="0">
+    </testcase>
+  
+
+  
+    <system-err>
+        Error while running [Sample / default]:
+
+  TypeError: Cannot read property 'url' of undefined
+    at /Users/sg0301153/Code/thebab/source/e2e/tests/sample.js:23:10
+    at Object.default (/Users/sg0301153/Code/thebab/source/e2e/tests/sample.js:10:11)
+    at Module.call (/Users/sg0301153/Code/thebab/node_modules/nightwatch/lib/runner/module.js:62:34)
+    at /Users/sg0301153/Code/thebab/node_modules/nightwatch/lib/runner/testcase.js:70:29
+    at _fulfilled (/Users/sg0301153/Code/thebab/node_modules/nightwatch/node_modules/q/q.js:834:54)
+    at self.promiseDispatch.done (/Users/sg0301153/Code/thebab/node_modules/nightwatch/node_modules/q/q.js:863:30)
+    at Promise.promise.promiseDispatch (/Users/sg0301153/Code/thebab/node_modules/nightwatch/node_modules/q/q.js:796:13)
+    at /Users/sg0301153/Code/thebab/node_modules/nightwatch/node_modules/q/q.js:556:49
+    at runSingle (/Users/sg0301153/Code/thebab/node_modules/nightwatch/node_modules/q/q.js:137:13)
+    at flush (/Users/sg0301153/Code/thebab/node_modules/nightwatch/node_modules/q/q.js:125:13)
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+    </system-err>
+  
+
+  
+  </testsuite>
+</testsuites>
