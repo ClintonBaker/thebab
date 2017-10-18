@@ -159,6 +159,7 @@
 		"tap": false,
 		"require": [
 			"babel-register",
+			"babel-polyfill",
 			"ignore-styles"
 		],
 		"babel": "inherit",
