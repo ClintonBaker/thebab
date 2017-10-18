@@ -6,5 +6,6 @@ module.exports = {
 	'@utils': resolve(__dirname, '../../source/utils'),
 	'@packages': resolve(__dirname, '../../source/packages'),
 	'@scenes': resolve(__dirname, '../../source/scenes'),
-	'@store': resolve(__dirname, '../../source/store')
+	'@store': resolve(__dirname, '../../source/store'),
+	'@e2e': resolve(__dirname, '../../source/e2e')
 };

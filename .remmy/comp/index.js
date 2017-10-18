@@ -1,1 +1,2 @@
-export $NAME from './$NAME'
+import $NAME from './$NAME'
+export default $NAME;

@@ -18,7 +18,7 @@ type PropsT = CorePropsT & {
 
 const Input = (props: PropsT) => {
 	return (
-		<div styleName="Input" className='Input-comp'>
+		<div styleName="Input" className='Input-comp' e2e={props.e2e || 'Input'}>
 			<If condition={props.label}>
 				<label>{props.label}</label>
 			</If>

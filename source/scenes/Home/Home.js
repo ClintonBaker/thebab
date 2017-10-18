@@ -28,20 +28,21 @@ class Home extends React.PureComponent {
 
 	render({ props, state } = this) {
 		return (
-			<div styleName="Home">
+			<div styleName="Home" e2e='Home'>
 				<div styleName="header">
-					<Title>The Hub For Tooling Enthusiasts</Title>
+					<Title e2e='title'>The Hub For Tooling Enthusiasts</Title>
 					<Box padding="24px" width="400px" layout="column">
 						<Input
 							onIconClick={this.getSearchResults}
 							onChange={this.setSearchValue}
 							placeholder="search query"
 							value={state.searchValue}
+							e2e='searchInput'
 							icon="search"
 							iconSize="lg"
 						/>
 						<Link styleName="create-new" to="/submit">
-							<SmallText>submit a new thing</SmallText>
+							<SmallText e2e='submitLink'>submit a new thing</SmallText>
 						</Link>
 					</Box>
 				</div>
