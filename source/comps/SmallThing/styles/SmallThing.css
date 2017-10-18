@@ -1,0 +1,10 @@
+.SmallThing {
+	layout: column;
+	border-radius: 3px;
+	box-shadow: shadow1;
+	width: 32%;
+}
+
+.top {
+	padding: 12px;
+}

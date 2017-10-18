@@ -11,6 +11,7 @@ const Icon = (props: PropsT) => {
 	return (
 		<i
 			className={`icon ion-${props.name} icon-${props.size} ${props.className}`}
+			e2e={props.e2e || 'Icon'}
 			onClick={props.onClick}
 			styleName="Icon"
 		/>
