@@ -38,6 +38,8 @@
 
 .body {
 	width: 100%;
+	layout: column;
+	content-x: center;
 }
 
 .thingBox {

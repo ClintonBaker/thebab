@@ -1,1 +1,1 @@
-import './CorePropsT';
+require('./CorePropsT');

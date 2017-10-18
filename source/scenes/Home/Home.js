@@ -66,6 +66,7 @@ class Home extends React.PureComponent {
 									<SmallThing
 										name={thing.name}
 										id={thing.id}
+										key={thing.id}
 									/>
 								</For>
 							</section>

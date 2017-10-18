@@ -95,6 +95,7 @@
 		"prettier": "^1.7.4",
 		"puppeteer": "^0.11.0",
 		"remmy": "^1.0.5",
+		"revtype": "^0.5.1",
 		"simple-progress-webpack-plugin": "^1.0.4",
 		"style-loader": "^0.18.2",
 		"stylus": "^0.54.5",

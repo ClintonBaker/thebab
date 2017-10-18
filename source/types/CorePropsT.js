@@ -1,4 +1,4 @@
-export type CorePropsT = {
+declare type CorePropsT = {
 	onClick?: Function,
 	onContextMenu?: Function,
 	onDoubleClick?: Function,
