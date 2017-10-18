@@ -8,5 +8,5 @@ module.exports = {
 	overlay: true,
 	inline: true,
 	noInfo: true,
-	open: true
+	open: false
 };
