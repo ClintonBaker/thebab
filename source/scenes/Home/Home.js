@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react';
 import './styles/Home.css';
-
 import { Link } from 'react-router';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
