@@ -15,7 +15,7 @@
 		"prepush": "npm test",
 		"lint": "./node_modules/.bin/eslint --fix",
 		"prettier": "./node_modules/.bin/prettier --config ./prettier.js --write '{source,__{tests,mocks}__}/**/*.js'",
-		"selenium": "java -jar ./automation/_dependencies/selenium-server-standalone-3.0.1.jar",
+		"selenium": "java -jar ./source/e2e/utils/_dependencies/selenium-server-standalone-3.0.1.jar",
 		"nightwatch": "./node_modules/.bin/nightwatch --config ./nightwatch.js -t ./source/e2e/tests/sample.js"
 	},
 	"lint-staged": {
@@ -63,6 +63,7 @@
 		"babel-preset-react": "^7.0.0-beta.2",
 		"babel-preset-stage-0": "^7.0.0-beta.2",
 		"babel-register": "^7.0.0-beta.2",
+		"chai": "^4.1.2",
 		"chromedriver": "^2.33.1",
 		"clean-webpack-plugin": "^0.1.16",
 		"copy-webpack-plugin": "^4.0.1",

@@ -13,16 +13,16 @@ type PropsT = CorePropsT & {
 	label?: string,
 	onIconClick?: Function,
 	iconSize?: string,
-	icon?: string,
+	icon?: string
 };
 
 const Input = (props: PropsT) => {
 	return (
-		<div styleName="Input" className='Input-comp' e2e={props.e2e || 'Input'}>
+		<div styleName="Input" className="Input-comp" e2e={props.e2e || 'Input'}>
 			<If condition={props.label}>
 				<label>{props.label}</label>
 			</If>
-			<div styleName='box'>
+			<div styleName="box">
 				<input
 					defaultValue={props.defaultValue}
 					placeholder={props.placeholder}
@@ -30,9 +30,15 @@ const Input = (props: PropsT) => {
 					onChange={props.onChange}
 					value={props.value}
 					name={props.name}
+					id={props.id}
 				/>
 				<If condition={props.icon}>
-					<Icon onClick={props.onIconClick} size={props.iconSize} name={props.icon} styleName="icon" />
+					<Icon
+						onClick={props.onIconClick}
+						size={props.iconSize}
+						name={props.icon}
+						styleName="icon"
+					/>
 				</If>
 			</div>
 		</div>
@@ -40,7 +46,7 @@ const Input = (props: PropsT) => {
 };
 
 Input.defaultProps = {
-	required: false,
+	required: false
 };
 
 export default Input;

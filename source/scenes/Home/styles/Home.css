@@ -35,3 +35,24 @@
 		opacity: 1;
 	}
 }
+
+.body {
+	width: 100%;
+}
+
+.thingBox {
+	width: 100%;
+	max-width: 980px;
+	padding: 0 24px;
+	margin: 0 auto;
+	layout: row;
+	flex-wrap: wrap;
+	content-x: space-between;
+
+}
+
+.loadingIndicator {
+	h3 {
+		opacity: 0.5;
+	}
+}
