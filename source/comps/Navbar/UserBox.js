@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 import './styles/UserBox.css';
 
@@ -11,7 +12,9 @@ const UserBox = props => {
 				</When>
 				<Otherwise>
 					<small>Log In</small>
-					<small>Sign Up</small>
+					<Link to='/signup'>
+						<small>Sign Up</small>
+					</Link>
 				</Otherwise>
 			</Choose>
 		</div>

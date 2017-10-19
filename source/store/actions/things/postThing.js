@@ -13,7 +13,7 @@ export default form => {
 				if (response.ok) {
 					return response.json();
 				}
-				throw new Error('Shit fucked up');
+				throw new Error('Things went wrong');
 			})
 			.then(json => {
 				dispatch({

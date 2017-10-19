@@ -3,7 +3,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import React from 'react';
 
-import { Browse, Home, Inspect, Profile, Settings, Submit } from '@scenes';
+import { Browse, Home, Inspect, Profile, Settings, Submit, Signup } from '@scenes';
 import { Frame, Navbar } from '@comps';
 
 const App = props => {
@@ -22,6 +22,8 @@ const App = props => {
 						<IndexRoute component={Browse} />
 						<Route path="/inspect/:id" component={Inspect} />
 					</Route>
+
+					<Route path='/signup' component={Signup}/>
 
 					<Route path="/submit" component={Submit} />
 				</Route>
