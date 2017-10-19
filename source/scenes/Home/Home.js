@@ -41,8 +41,6 @@ class Home extends React.PureComponent {
 	};
 
 	getSearchResults = () => {
-		console.log('getting dem shits');
-
 		this.setState( state =>{
 			return {
 				searchResults: this.state.things.filter( thing => {
@@ -53,13 +51,6 @@ class Home extends React.PureComponent {
 					thing.description.indexOf(this.state.searchValue) > -1
 						? shouldReturn = true
 						: null;
-					
-					// let tagz = thing.tagz.filter( tag => {
-					// 	return tag.indexOf(this.state.searchValue) > -1;
-					// });
-					// tagz.length
-					// 	? shouldReturn = true
-					// 	: null;
 
 					thing.tags.indexOf(this.state.searchValue) > -1
 						? shouldReturn = true
