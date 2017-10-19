@@ -13,15 +13,23 @@ type PropsT = {
 class Home extends React.PureComponent {
 	state = {
 		searchValue: '',
+		searchResults: [],
 		things: []
 	};
 
 	async componentDidMount() {
-		const response = await fetch('http://rest.learncode.academy/api/thebab/things');
-		const data = await response.json();
-		this.setState({
-			things: data
-		});
+		this.props.actions.getThings();
+	}
+
+	componentDidUpdate(prevProps) {
+		prevProps.things !== this.props.things
+			? this.setState(state => {
+					return {
+						things: this.props.things,
+						searchResults: this.props.things
+					};
+				})
+			: null;
 	}
 
 	setSearchValue = ({ target: { value } }) => {
@@ -33,11 +41,28 @@ class Home extends React.PureComponent {
 	};
 
 	getSearchResults = () => {
-		console.log('getting dem shits');
+		this.setState( state =>{
+			return {
+				searchResults: this.state.things.filter( thing => {
+					let shouldReturn = false;
+					thing.name.indexOf(this.state.searchValue) > -1
+						? shouldReturn = true
+						: null;
+					thing.description.indexOf(this.state.searchValue) > -1
+						? shouldReturn = true
+						: null;
+
+					thing.tags.indexOf(this.state.searchValue) > -1
+						? shouldReturn = true
+						: null;
+					
+					return shouldReturn;
+				})
+			};
+		});
 	};
 
 	render({ props, state } = this) {
-		console.log(state.things)
 		return (
 			<div styleName="Home" e2e="Home">
 				<div styleName="header" e2e="header">
@@ -60,9 +85,9 @@ class Home extends React.PureComponent {
 				</div>
 				<main styleName='body'>
 					<Choose>
-						<When condition={state.things.length}>
+						<When condition={state.searchResults.length}>
 							<section styleName='thingBox'>
-								<For each='thing' of={state.things} index='index'>
+								<For each='thing' of={state.searchResults} index='index'>
 									<SmallThing
 										name={thing.name}
 										id={thing.id}

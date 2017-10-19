@@ -2,25 +2,29 @@ import { Link } from 'react-router';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
-import * as userActions from '@store/actions/users';
+import { getThing } from '@store/actions/things';
 import Home from './Home';
 
 const mapStateToProps = state => {
 	return {
-		users: state.users,
+		things: state.things.thingData,
 	};
 };
 
 const mapActionsToProps = dispatch => {
 	return {
 		actions: {
-			getUsers() {
-				dispatch(userActions.getUsers());
+			getThings() {
+				dispatch(getThing(''));
 			},
-			clearUsers() {
-				dispatch(userActions.clearUsers());
-			},
-		},
+			removeThings(things) {
+				things.forEach(thing => {
+					fetch('http://rest.learncode.academy/api/thebab/things/' + thing.id, {
+						method: 'DELETE'
+					});
+				});
+			}
+		}
 	};
 };
 
