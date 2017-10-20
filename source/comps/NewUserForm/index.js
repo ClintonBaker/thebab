@@ -2,11 +2,6 @@ import { connect } from 'react-redux';
 import NewUserForm from './NewUserForm';
 import { newUser } from '@store/actions/users';
 
-const mapStateToProps = state => {
-	return {
-	};
-};
-
 const mapActionsToProps = dispatch => {
 	return {
 		actions: {
@@ -17,4 +12,4 @@ const mapActionsToProps = dispatch => {
 	};
 };
 
-export default connect(mapStateToProps, mapActionsToProps)(NewUserForm);
+export default connect(mapActionsToProps)(NewUserForm);
