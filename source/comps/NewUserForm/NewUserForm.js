@@ -86,4 +86,4 @@ class NewUserForm extends React.Component {
 	}
 }
 
-export default NewUserForm
+export default NewUserForm;
