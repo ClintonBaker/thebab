@@ -1,2 +1,2 @@
-export const CLEAR_USERS = 'CLEAR_USERS';
-export const GET_USERS = 'GET_USERS';
+export const NEW_USER = 'NEW_USER';
+export const AUTH_USER = 'AUTH_USER';

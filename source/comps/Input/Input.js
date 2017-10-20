@@ -31,6 +31,7 @@ const Input = (props: PropsT) => {
 					value={props.value}
 					name={props.name}
 					id={props.id}
+					type={props.type}
 				/>
 				<If condition={props.icon}>
 					<Icon

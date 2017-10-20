@@ -1,13 +1,13 @@
-import { POST_THING } from '../../consts/things';
+import { NEW_USER } from '../../consts/users';
 
-export default form => {
-	return dispatch => {
-		fetch('http://rest.learncode.academy/api/thebab/things', {
+export default user => {
+  return dispatch => {
+    fetch('http://rest.learncode.academy/api/thebab/users', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
 			},
-			body: JSON.stringify(form),
+			body: JSON.stringify(user),
 		})
 			.then(response => {
 				if (response.ok) {
@@ -17,12 +17,12 @@ export default form => {
 			})
 			.then(json => {
 				dispatch({
-					type: POST_THING,
-					data: json.id,
+					type: NEW_USER,
+					data: json,
 				});
 			})
 			.catch(error => {
-				console.log('We had some issues...');
+				console.log(error);
 			});
-	};
-};
+  }
+}
