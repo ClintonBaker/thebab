@@ -12,3 +12,4 @@ export SmallText from './SmallText';
 export Paragraph from './Paragraph';
 export Box from './Box';
 export Frame from './Frame';
+export NewUserForm from './NewUserForm';
