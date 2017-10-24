@@ -7,11 +7,13 @@ const UserBox = props => {
 	return (
 		<div styleName="UserBox" e2e={props.e2e || 'UserBox'}>
 			<Choose>
-				<When condition={props.loggedIn}>
+				<When condition={props.authenticated}>
 					<p>Log Out</p>
 				</When>
 				<Otherwise>
-					<small>Log In</small>
+					<Link to='/login'>
+						<small>Log In</small>
+					</Link>
 					<Link to='/signup'>
 						<small>Sign Up</small>
 					</Link>

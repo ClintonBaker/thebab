@@ -22,7 +22,7 @@ const Navbar = props => {
 				<p>latest</p>
 				<p>blog</p>
 			</div>
-			<UserBox />
+			<UserBox authenticated={props.authenticated} />
 		</nav>
 	);
 };

@@ -6,7 +6,7 @@ const mapActionsToProps = dispatch => {
 	return {
 		actions: {
 			newUser(user) {
-				dispatch(newUser(user));
+				dispatch(newUser(user))
 			},
 		},
 	};

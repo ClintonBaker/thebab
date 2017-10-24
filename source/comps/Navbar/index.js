@@ -5,16 +5,14 @@ import * as userActions from '@store/actions/users';
 
 const mapStateToProps = state => {
 	return {
-		session: state.session,
+		authenticated: state.users.authenticated,
+		user: state.users.user
 	};
 };
 
 const mapActionsToProps = dispatch => {
 	return {
 		actions: {
-			logHello() {
-				// console.log('hello, fucker.')
-			},
 		},
 	};
 };
