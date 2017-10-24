@@ -12,4 +12,4 @@ const mapActionsToProps = dispatch => {
 	};
 };
 
-export default connect(mapActionsToProps)(NewUserForm);
+export default connect(null, mapActionsToProps)(NewUserForm);
