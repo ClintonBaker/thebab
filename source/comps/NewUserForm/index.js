@@ -6,10 +6,10 @@ const mapActionsToProps = dispatch => {
 	return {
 		actions: {
 			newUser(user) {
-				dispatch(newUser(user));
+				dispatch(newUser(user))
 			},
 		},
 	};
 };
 
-export default connect(mapActionsToProps)(NewUserForm);
+export default connect(null, mapActionsToProps)(NewUserForm);

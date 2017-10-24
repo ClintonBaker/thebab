@@ -1,2 +1,2 @@
 export newUser from './newUser';
-export loginUser from './loginUser';
+export authUser from './authUser';
