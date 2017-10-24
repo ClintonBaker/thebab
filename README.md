@@ -1,6 +1,6 @@
 # thebab
 
-> It does shit.
+> It's the bread and butter of development!
 
 # Development Instructions
 
