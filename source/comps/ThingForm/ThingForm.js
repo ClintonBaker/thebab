@@ -35,6 +35,7 @@ class ThingForm extends Component {
 			link: this.state.link,
 			description: this.state.description,
 			tags: this.state.tags,
+			comments: []
 		});
 	};
 

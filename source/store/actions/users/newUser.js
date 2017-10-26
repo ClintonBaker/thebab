@@ -18,7 +18,7 @@ export default user => {
 			.then(json => {
 				dispatch({
 					type: NEW_USER,
-					data: json,
+					data: json.username,
 				});
 			})
 			.catch(error => {

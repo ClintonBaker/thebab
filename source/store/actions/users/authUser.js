@@ -12,7 +12,7 @@ export default ( name, password ) => {
         ? user[0].password === password
           ? dispatch({
               type: AUTH_USER,
-              user: user[0]
+              user: user[0].username
           })
           : null
         : null
