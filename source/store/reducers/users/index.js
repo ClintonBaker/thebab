@@ -1,6 +1,6 @@
 import { NEW_USER, AUTH_USER, LOGOUT } from '../../consts/users';
 
-const initialState = { user: null, NewUser: false, authenticated: false };
+const initialState = { user: 'Guest', NewUser: false, authenticated: false };
 
 export default (state = initialState, action) => {
 	if (action.type === NEW_USER) {
@@ -8,7 +8,7 @@ export default (state = initialState, action) => {
 	} else if (action.type === AUTH_USER) {
 		return { ...state, user: action.user, authenticated: true }
 	} else if ( action.type === LOGOUT ) {
-		return { ...state, user: null, authenticated: false }
+		return { ...state, user: 'Guest', authenticated: false }
 	} else {
 		return state;
 	}

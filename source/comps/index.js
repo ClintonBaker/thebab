@@ -14,3 +14,6 @@ export Box from './Box';
 export Frame from './Frame';
 export NewUserForm from './NewUserForm';
 export LoginForm from './LoginForm';
+export CommentBox from './CommentBox';
+export CommentSection from './CommentSection';
+export Comment from './Comment';
