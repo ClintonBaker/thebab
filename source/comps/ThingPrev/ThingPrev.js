@@ -5,7 +5,7 @@ const ThingPrev = (props: PropsT) => {
 	return (
 		<div styleName="ThingPrev">
 			<h4>{props.data.name}</h4>
-			<p>{props.data.description.substr(0, 70)}</p>
+			<p>{props.data.description.substr(0, 180)}</p>
 		</div>
 	);
 };
