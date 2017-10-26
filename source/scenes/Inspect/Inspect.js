@@ -14,8 +14,8 @@ class Inspect extends React.Component {
 				<Choose>
 					<When condition={!props.thing.length}>
 						<h3>{props.thing.name}</h3>
-						<p>{props.thing.link}</p>
-						<p>{props.thing.description}</p>
+						<a href={props.thing.link}>{props.thing.link}</a>
+						<p styleName='description'>{props.thing.description}</p>
 						<small>{props.thing.tags}</small>
 						<Choose>
 							<When condition={props.thing.comments.length}>

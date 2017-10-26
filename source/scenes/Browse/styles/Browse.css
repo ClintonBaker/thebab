@@ -1,4 +1,6 @@
 .Browse {
-  display: flex;
-  flex-direction: column;
+  layout: column;
+  margin: 50px auto;
+  width: 750px;
 }
+
