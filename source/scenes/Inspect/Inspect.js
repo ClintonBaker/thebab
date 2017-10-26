@@ -16,7 +16,7 @@ class Inspect extends React.Component {
 						<h3>{props.thing.name}</h3>
 						<a href={props.thing.link}>{props.thing.link}</a>
 						<p styleName='description'>{props.thing.description}</p>
-						<small>{props.thing.tags}</small>
+						<small styleName='tags'>tags: {props.thing.tags}</small>
 						<Choose>
 							<When condition={props.thing.comments.length}>
 								<CommentSection comments={props.thing.comments}/>

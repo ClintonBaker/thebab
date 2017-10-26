@@ -5,4 +5,10 @@
 
 .description {
   text-indent: 25px;
+  margin-top: 10px;
+  font-size: 1.2em;
+}
+
+.tags {
+  margin: 5px 0;
 }
