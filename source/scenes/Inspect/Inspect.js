@@ -12,13 +12,13 @@ class Inspect extends React.Component {
 		return (
 			<div styleName="Inspect">
 				<Choose>
-					<When condition={props.thing}>
+					<When condition={!props.thing.length}>
 						<h3>{props.thing.name}</h3>
 						<p>{props.thing.link}</p>
 						<p>{props.thing.description}</p>
 						<small>{props.thing.tags}</small>
 						<Choose>
-							<When condition={props.thing.comments}>
+							<When condition={props.thing.comments.length}>
 								<CommentSection comments={props.thing.comments}/>
 							</When>
 							<Otherwise>
