@@ -12,6 +12,7 @@
 	text-decoration: none;
 	transition: all .3s;
 	font-size: 1.6rem;
+	max-width: 200px;
 
 	&:hover {
 		background: color-accent5-light;

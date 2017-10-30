@@ -38,11 +38,14 @@ class CommentBox extends React.Component {
 		return (
 			<div styleName='CommentBox'>
 				<textarea 
+					styleName='CommentArea'
 					value={state.newComment}
 					name='newComment'
 					onChange={this.updateInput}
 				/>
-				<Button onClick={this.submit}>Comment</Button>
+				<div styleName='CommentButton'>
+					<Button onClick={this.submit}>Comment</Button>
+				</div>
 			</div>
 		)
 	}
