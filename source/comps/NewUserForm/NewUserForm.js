@@ -52,20 +52,20 @@ class NewUserForm extends React.Component {
 		return (
 			<div styleName='NewUserForm'>
 				<div styleName='form'>
-					< Input
+					<Input
 						name='userName'
 						value={ state.userName }
 						onChange={ this.updateInput }
 						placeholder='Enter user name'
 					/>
-					< Input
+					<Input
 						name='newPass'
 						value={ state.newPass }
 						type='password'
 						onChange={ this.updateInput }
 						placeholder='Enter password'
 					/>
-					< Input
+					<Input
 						name='confPass'
 						value={ state.confPass }
 						type='password'

@@ -22,7 +22,7 @@ const Navbar = props => {
 				<p>latest</p>
 				<p>blog</p>
 			</div>
-			<UserBox authenticated={props.authenticated} logout={props.actions.logout} />
+			<UserBox authenticated={props.authenticated} logout={props.actions.logout}/>
 		</nav>
 	);
 };
