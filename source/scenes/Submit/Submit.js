@@ -11,7 +11,7 @@ class Submit extends React.Component {
 	render() {
 		return (
 			<div styleName="Submit">
-				<ThingForm />
+				<ThingForm/>
 			</div>
 		);
 	}

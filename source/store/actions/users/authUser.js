@@ -8,13 +8,11 @@ export default ( name, password ) => {
       let user = users.filter( user => {
         return user.username === name;
       });
-      user.length
-        ? user[0].password === password
-          ? dispatch({
+      user.length && user[0].password === password
+        ? dispatch({
               type: AUTH_USER,
               user: user[0].username
           })
-          : null
         : null
     });
   }

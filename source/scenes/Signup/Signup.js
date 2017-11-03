@@ -10,7 +10,7 @@ class Signup extends React.Component {
 	render(){
 		return(
 			<div styleName='Signup'>
-				< NewUserForm/>
+				<NewUserForm/>
 			</div>
 		)
 	}

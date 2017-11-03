@@ -38,13 +38,13 @@ class LoginForm extends React.Component {
 		return (
 			<div styleName='LoginForm'>
 				<div styleName='form'>
-					< Input
+					<Input
 						name='userName'
 						value={ state.userName }
 						onChange={ this.updateInput }
 						placeholder='Enter user name'
 					/>
-					< Input
+					<Input
 						name='password'
 						value={ state.password }
 						type='password'
