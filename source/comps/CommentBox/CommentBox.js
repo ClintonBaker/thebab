@@ -7,8 +7,8 @@ class CommentBox extends React.Component {
 		newComment: ''
 	}
 
-	updateInput = ({ target: { name, value }}) => {
-		this.setState( state => {
+	updateInput = ({ target: { name, value } }) => {
+		this.setState(state => {
 			return ({
 				[name]: value
 			})
@@ -22,22 +22,22 @@ class CommentBox extends React.Component {
 			description: this.props.thing.description,
 			tags: this.props.thing.tags,
 			id: this.props.thing.id,
-			comments: [ ...this.props.thing.comments, {
+			comments: [...this.props.thing.comments, {
 				author: this.props.user,
 				comment: this.state.newComment
 			}]
 		})
-		this.setState( state => {
-			return({
+		this.setState(state => {
+			return ({
 				newComment: ''
 			})
 		})
 	}
 
-	render({ state } = this){
+	render({ state } = this) {
 		return (
 			<div styleName='CommentBox'>
-				<textarea 
+				<textarea
 					styleName='CommentArea'
 					value={state.newComment}
 					name='newComment'

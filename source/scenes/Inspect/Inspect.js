@@ -17,16 +17,16 @@ class Inspect extends React.Component {
 						<a href={props.thing.link}>{props.thing.link}</a>
 						<p styleName='description'>{props.thing.description}</p>
 						<div styleName='tags'><small>tags: {props.thing.tags}</small></div>
-						<hr/>
+						<hr />
 						<Choose>
 							<When condition={props.thing.comments.length}>
-								<CommentSection comments={props.thing.comments}/>
+								<CommentSection comments={props.thing.comments} />
 							</When>
 							<Otherwise>
 								<p>Currently there are no comments to display! Perhaps you could be the first?</p>
 							</Otherwise>
 						</Choose>
-						<CommentBox thing={props.thing}/>
+						<CommentBox thing={props.thing} />
 					</When>
 					<Otherwise>
 						<small>loading</small>

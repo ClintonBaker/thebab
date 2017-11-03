@@ -7,7 +7,7 @@ export default (state = initialState, action) => {
 		return { ...state, user: action.data, NewUser: true, authenticated: true };
 	} else if (action.type === AUTH_USER) {
 		return { ...state, user: action.user, authenticated: true }
-	} else if ( action.type === LOGOUT ) {
+	} else if (action.type === LOGOUT) {
 		return { ...state, user: 'Guest', authenticated: false }
 	} else {
 		return state;

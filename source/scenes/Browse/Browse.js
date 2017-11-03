@@ -16,10 +16,10 @@ class Browse extends React.Component {
 	componentDidUpdate(prevProps) {
 		prevProps.things !== this.props.things
 			? this.setState(state => {
-					return {
-						things: this.props.things,
-					};
-				})
+				return {
+					things: this.props.things,
+				};
+			})
 			: null;
 	}
 

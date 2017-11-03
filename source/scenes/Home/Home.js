@@ -24,11 +24,11 @@ class Home extends React.PureComponent {
 	componentDidUpdate(prevProps) {
 		prevProps.things !== this.props.things
 			? this.setState(state => {
-					return {
-						things: this.props.things,
-						searchResults: this.props.things
-					};
-				})
+				return {
+					things: this.props.things,
+					searchResults: this.props.things
+				};
+			})
 			: null;
 	}
 
@@ -41,9 +41,9 @@ class Home extends React.PureComponent {
 	};
 
 	getSearchResults = () => {
-		this.setState( state =>{
+		this.setState(state => {
 			return {
-				searchResults: this.state.things.filter( thing => {
+				searchResults: this.state.things.filter(thing => {
 					let shouldReturn = false;
 					thing.name.indexOf(this.state.searchValue) > -1
 						? shouldReturn = true
@@ -55,7 +55,7 @@ class Home extends React.PureComponent {
 					thing.tags.indexOf(this.state.searchValue) > -1
 						? shouldReturn = true
 						: null;
-					
+
 					return shouldReturn;
 				})
 			};

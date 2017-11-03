@@ -10,8 +10,8 @@ class LoginForm extends React.Component {
 	};
 
 	updateInput = ({ target: { name, value } }) => {
-		this.setState( state => {
-			return({
+		this.setState(state => {
+			return ({
 				[name]: value
 			});
 		});
@@ -26,34 +26,34 @@ class LoginForm extends React.Component {
 	}
 
 	clearForm = () => {
-		this.setState( state => {
-			return({
+		this.setState(state => {
+			return ({
 				userName: '',
 				password: ''
 			})
 		})
 	}
 
-	render( { state } = this ){
+	render({ state } = this) {
 		return (
 			<div styleName='LoginForm'>
 				<div styleName='form'>
 					<Input
 						name='userName'
-						value={ state.userName }
-						onChange={ this.updateInput }
+						value={state.userName}
+						onChange={this.updateInput}
 						placeholder='Enter user name'
 					/>
 					<Input
 						name='password'
-						value={ state.password }
+						value={state.password}
 						type='password'
-						onChange={ this.updateInput }
+						onChange={this.updateInput}
 						placeholder='Enter password'
 					/>
 					<Button onClick={this.logUserIn}>Log In</Button>
+				</div>
 			</div>
-		</div>
 		)
 	}
 }

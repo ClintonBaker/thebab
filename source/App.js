@@ -18,7 +18,7 @@ const App = props => {
 						<Route path="/inspect/:id" component={Inspect} />
 					</Route>
 
-					<Route path='/signup' component={Signup}/>
+					<Route path='/signup' component={Signup} />
 
 					<Route path="/submit" component={Submit} />
 

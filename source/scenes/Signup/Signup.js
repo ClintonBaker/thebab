@@ -7,10 +7,10 @@ class Signup extends React.Component {
 	componentDidUpdate() {
 		this.props.authenticated && this.props.router.push('/');
 	};
-	render(){
-		return(
+	render() {
+		return (
 			<div styleName='Signup'>
-				<NewUserForm/>
+				<NewUserForm />
 			</div>
 		)
 	}

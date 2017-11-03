@@ -12,8 +12,8 @@ class NewUserForm extends React.Component {
 	};
 
 	updateInput = ({ target: { name, value } }) => {
-		this.setState( state => {
-			return({
+		this.setState(state => {
+			return ({
 				[name]: value
 			});
 		});
@@ -28,8 +28,8 @@ class NewUserForm extends React.Component {
 	}
 
 	clearForm = () => {
-		this.setState( state => {
-			return({
+		this.setState(state => {
+			return ({
 				userName: '',
 				newPass: '',
 				confPass: '',
@@ -41,35 +41,35 @@ class NewUserForm extends React.Component {
 	submitUser = () => {
 		this.state.newPass === this.state.confPass
 			? this.newUser()
-			: this.setState( state => {
+			: this.setState(state => {
 				return ({
 					passMatch: false
 				});
 			});
 	}
 
-	render( { state } = this ){
+	render({ state } = this) {
 		return (
 			<div styleName='NewUserForm'>
 				<div styleName='form'>
 					<Input
 						name='userName'
-						value={ state.userName }
-						onChange={ this.updateInput }
+						value={state.userName}
+						onChange={this.updateInput}
 						placeholder='Enter user name'
 					/>
 					<Input
 						name='newPass'
-						value={ state.newPass }
+						value={state.newPass}
 						type='password'
-						onChange={ this.updateInput }
+						onChange={this.updateInput}
 						placeholder='Enter password'
 					/>
 					<Input
 						name='confPass'
-						value={ state.confPass }
+						value={state.confPass}
 						type='password'
-						onChange={ this.updateInput }
+						onChange={this.updateInput}
 						placeholder='Confirm password'
 					/>
 					<Choose>
@@ -80,8 +80,8 @@ class NewUserForm extends React.Component {
 						</When>
 					</Choose>
 					<Button onClick={this.submitUser}>Sign Up</Button>
+				</div>
 			</div>
-		</div>
 		)
 	}
 }

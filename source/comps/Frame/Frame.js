@@ -6,7 +6,7 @@ class Frame extends Component {
 	render({ props, state } = this) {
 		return (
 			<div styleName="Frame">
-				<Navbar onInnerPage={props.location.pathname !== '/'}/>
+				<Navbar onInnerPage={props.location.pathname !== '/'} />
 				{props.children}
 			</div>
 		);
