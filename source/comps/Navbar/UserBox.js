@@ -8,7 +8,7 @@ const UserBox = props => {
 		<div styleName="UserBox" e2e={props.e2e || 'UserBox'}>
 			<Choose>
 				<When condition={props.authenticated}>
-					<a onClick={ props.logout }>
+					<a onClick={props.logout}>
 						<p>Log Out</p>
 					</a>
 				</When>

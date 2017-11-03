@@ -2,15 +2,15 @@ import React from 'react';
 import { LoginForm } from '@comps';
 import './styles/Login.css';
 
-class Login extends React.Component{
+class Login extends React.Component {
 	componentDidUpdate() {
 		this.props.authenticated && this.props.router.push('/');
 	};
 
-	render(){
+	render() {
 		return (
 			<div styleName='Login'>
-				<LoginForm/>
+				<LoginForm />
 			</div>
 		);
 	}

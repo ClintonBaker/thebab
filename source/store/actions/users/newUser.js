@@ -1,8 +1,8 @@
 import { NEW_USER } from '../../consts/users';
 
 export default user => {
-  return dispatch => {
-    fetch('http://rest.learncode.academy/api/thebab/users', {
+	return dispatch => {
+		fetch('http://rest.learncode.academy/api/thebab/users', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
@@ -24,5 +24,5 @@ export default user => {
 			.catch(error => {
 				console.log(error);
 			});
-  }
+	}
 }
