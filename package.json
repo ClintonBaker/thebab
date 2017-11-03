@@ -58,7 +58,7 @@
 		"babel-plugin-transform-optional-chaining": "^7.0.0-beta.2",
 		"babel-plugin-transform-react-display-name": "^7.0.0-beta.2",
 		"babel-plugin-webpack-alias": "^2.1.2",
-		"babel-preset-env": "^2.0.0-beta.2",
+		"babel-preset-env": "^7.0.0-beta.2",
 		"babel-preset-flow": "^7.0.0-beta.2",
 		"babel-preset-react": "^7.0.0-beta.2",
 		"babel-preset-stage-0": "^7.0.0-beta.2",
